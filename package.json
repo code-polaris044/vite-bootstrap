@@ -1,7 +1,7 @@
 {
 	"name": "vite-bootstrap",
 	"version": "1.0.0",
-	"description": "## 概要",
+	"description": "vite + bootstrap + sass-embedded",
 	"private": true,
 	"type": "module",
 	"main": "index.js",
@@ -29,10 +29,20 @@
 	"homepage": "https://github.com/code-polaris044/vite-bootstrap#readme",
 	"devDependencies": {
 		"@biomejs/biome": "^2.0.6",
+		"@fortawesome/fontawesome-svg-core": "^6.7.2",
+		"@fortawesome/free-solid-svg-icons": "^6.7.2",
+		"@popperjs/core": "^2.11.8",
+		"autoprefixer": "^10.4.21",
+		"bootstrap": "^5.3.7",
 		"browserlist": "^1.0.1",
+		"cross-env": "^7.0.3",
 		"editorconfig": "^3.0.1",
 		"markuplint": "^4.12.0",
 		"prettier": "^3.6.2",
-		"stylelint": "^16.21.1"
+		"sass-embedded": "^1.89.2",
+		"stylelint": "^16.21.1",
+		"stylelint-config-standard-scss": "^15.0.1",
+		"stylelint-order": "^7.0.0",
+		"vite": "^7.0.2"
 	}
 }
