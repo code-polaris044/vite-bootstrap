@@ -1,0 +1,38 @@
+{
+	"name": "vite-bootstrap",
+	"version": "1.0.0",
+	"description": "## 概要",
+	"private": true,
+	"type": "module",
+	"main": "index.js",
+	"engines": {
+		"node": ">= 22.16.0",
+		"npm": ">= 10.9.2"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/code-polaris044/vite-bootstrap.git"
+	},
+	"keywords": [
+		"vite",
+		"bootstrap",
+		"sass-embedded"
+	],
+	"author": "code-polaris044",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/code-polaris044/vite-bootstrap/issues"
+	},
+	"homepage": "https://github.com/code-polaris044/vite-bootstrap#readme",
+	"devDependencies": {
+		"@biomejs/biome": "^2.0.6",
+		"browserlist": "^1.0.1",
+		"editorconfig": "^3.0.1",
+		"markuplint": "^4.12.0",
+		"prettier": "^3.6.2",
+		"stylelint": "^16.21.1"
+	}
+}
