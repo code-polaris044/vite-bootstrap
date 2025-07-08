@@ -3,7 +3,7 @@ import { resolve } from "path";
 export default {
 	root: resolve(__dirname, "resources"),
 	build: {
-		outDir: "../publick",
+		outDir: "../public",
 	},
 	server: {
 		port: 8080,
