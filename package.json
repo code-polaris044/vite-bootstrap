@@ -4,14 +4,15 @@
 	"description": "vite + bootstrap + sass-embedded",
 	"private": true,
 	"type": "module",
-	"main": "index.js",
+	"main": "resources/js/main.js",
 	"engines": {
 		"node": ">= 22.16.0",
 		"npm": ">= 10.9.2"
 	},
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build"
+		"build": "vite build",
+		"pre": "vite preview"
 	},
 	"repository": {
 		"type": "git",
