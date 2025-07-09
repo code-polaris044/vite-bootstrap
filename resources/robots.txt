@@ -1,0 +1,5 @@
+User-Agent:*
+Disallow:
+
+# Sitemap files
+Sitemap: https://telework-job.com/sitemap.php
