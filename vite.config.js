@@ -24,7 +24,7 @@ export default {
 	// 出力ファイルのパスを相対パスにする
 	base: "./",
 	// プロジェクトの開発ルートディレクトリを "resources" フォルダに設定
-	root: resolve(__dirname, "resources"),
+	// root: resolve(__dirname, "resources"),
 	// ビルド設定
 	build: {
 		// 画像やフォントなどをbase64埋め込みせず、必ずファイルとして出力
@@ -35,6 +35,9 @@ export default {
 		emptyOutDir: false,
 		// vite内部で使用されているrollup設定オプション
 		rollupOptions: {
+			input: {
+				main: resolve(__dirname, "resources/js/main.js"),
+			},
 			output: {
 				// JSファイルの出力設定
 				entryFileNames: "assets/js/[name].js",
