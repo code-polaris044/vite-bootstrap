@@ -1,5 +1,5 @@
 // Import our custom CSS
-import "../scss/styles.scss";
+// import "../scss/styles.scss";
 
 import Alert from "bootstrap/js/dist/alert";
 

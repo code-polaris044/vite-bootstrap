@@ -4,7 +4,7 @@
 	"description": "vite + bootstrap + sass-embedded",
 	"private": true,
 	"type": "module",
-	"main": "resources/js/main.js",
+	"main": "public/assets/js/main.js",
 	"engines": {
 		"node": ">= 22.16.0",
 		"npm": ">= 10.9.2"

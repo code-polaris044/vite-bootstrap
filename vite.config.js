@@ -31,10 +31,15 @@ export default {
 		outDir: "./public",
 		// ビルド前に出力先フォルダを空にしない(systemがあるため)
 		emptyOutDir: false,
+		// modulepreloadポリフィルを無効化
+		modulePreload: false,
 		// vite内部で使用されているrollup設定オプション
 		rollupOptions: {
 			input: {
 				main: resolve(__dirname, "resources/js/main.js"),
+				test: resolve(__dirname, "resources/js/test.js"),
+				styles: resolve(__dirname, "resources/scss/styles.scss"),
+				bootstrap: resolve(__dirname, "resources/scss/bootstrap.scss"),
 			},
 			output: {
 				// JSファイルの出力設定
