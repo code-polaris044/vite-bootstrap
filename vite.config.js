@@ -1,10 +1,16 @@
 import { resolve } from "path";
 import { viteStaticCopy } from "vite-plugin-static-copy";
+import { NodePackageImporter, info as sassEmbeddedInfo } from "sass-embedded";
+
+// sass-embedded apiが使用できているか確認
+console.log("=== sass-embedded info ===");
+console.log(sassEmbeddedInfo);
+console.log("==========================");
 
 export default {
 	root: resolve(__dirname, "resources"),
 	build: {
-		outDir: "../public",
+		outDir: "./../public",
 		rollupOptions: {
 			output: {
 				entryFileNames: "assets/js/[name].js",
@@ -33,6 +39,8 @@ export default {
 		preprocessorOptions: {
 			scss: {
 				silenceDeprecations: ["import", "mixed-decls", "color-functions", "global-builtin"],
+				api: "modern-compiler",
+				importers: [new NodePackageImporter()],
 			},
 		},
 	},
