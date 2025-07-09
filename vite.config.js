@@ -36,8 +36,20 @@ export default {
 		// vite内部で使用されているrollup設定オプション
 		rollupOptions: {
 			input: {
+				//既存js
 				common: resolve(__dirname, "resources/js/common.js"),
+				//新規js Bootstrapカスタム
 				script: resolve(__dirname, "resources/js/script.js"),
+				//既存css
+				commo: resolve(__dirname, "resources/scss/common.scss"),
+				contents: resolve(__dirname, "resources/scss/contents.scss"),
+				flatpickr: resolve(__dirname, "resources/scss/flatpickr.scss"),
+				home: resolve(__dirname, "resources/scss/home.scss"),
+				staff: resolve(__dirname, "resources/scss/staff.scss"),
+				user: resolve(__dirname, "resources/scss/user.scss"),
+				telework: resolve(__dirname, "resources/scss/telework.scss"),
+				system: resolve(__dirname, "resources/scss/system/system.scss"),
+				//新規css Bootstrapカスタム
 				styles: resolve(__dirname, "resources/scss/styles.scss"),
 				bootstrap: resolve(__dirname, "resources/scss/bootstrap.scss"),
 			},
