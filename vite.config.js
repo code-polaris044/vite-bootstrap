@@ -1,5 +1,8 @@
+// パスを扱うNode.jsの標準モジュール
 import { resolve } from "path";
+// 静的ファイル（画像やフォントなど）をコピーするViteプラグイン
 import { viteStaticCopy } from "vite-plugin-static-copy";
+// Sass（SCSS）の最新コンパイラと、その情報取得API
 import { NodePackageImporter, info as sassEmbeddedInfo } from "sass-embedded";
 
 // sass-embedded apiが使用できているか確認
@@ -7,14 +10,36 @@ console.log("=== sass-embedded info ===");
 console.log(sassEmbeddedInfo);
 console.log("==========================");
 
+// HTMLから crossOrigin 属性を削除するカスタムプラグイン
+const noCrossOrigin = () => {
+	return {
+		name: "no-crossorigin",
+		transformIndexHtml(html) {
+			return html.replace(/ crossorigin/g, "");
+		},
+	};
+};
+
 export default {
+	// 出力ファイルのパスを相対パスにする
+	base: "./",
+	// プロジェクトの開発ルートディレクトリを "resources" フォルダに設定
 	root: resolve(__dirname, "resources"),
+	// ビルド設定
 	build: {
-		outDir: "./../public",
+		// 画像やフォントなどをbase64埋め込みせず、必ずファイルとして出力
+		assetsInlineLimit: 0,
+		// ビルド成果物の出力先フォルダ（resourcesの一つ上の "public" フォルダ）
+		outDir: "../public",
+		// ビルド前に出力先フォルダを空にしない(systemがあるため)
+		emptyOutDir: false,
+		// vite内部で使用されているrollup設定オプション
 		rollupOptions: {
 			output: {
+				// JSファイルの出力設定
 				entryFileNames: "assets/js/[name].js",
 				chunkFileNames: "assets/js/[name].js",
+				// CSSファイルの出力設定
 				assetFileNames: (assetInfo) => {
 					if (assetInfo.name && assetInfo.name.endsWith(".css")) {
 						return "assets/css/[name][extname]";
@@ -24,22 +49,31 @@ export default {
 			},
 		},
 	},
+	// プラグインの設定
 	plugins: [
+		// 静的ファイル（フォントや画像）をビルド時にコピー
 		viteStaticCopy({
 			targets: [
 				{ src: "fonts/*", dest: "assets/fonts" },
 				{ src: "img/*", dest: "assets/img" },
 			],
 		}),
+		// HTMLから crossOrigin 属性を削除する独自プラグイン追記
+		noCrossOrigin(),
 	],
+	// 開発サーバーの設定
 	server: {
 		port: 8080,
 	},
+	// CSS（Sass/SCSS）の設定
 	css: {
 		preprocessorOptions: {
+			// 古い書き方の警告を非表示にするリスト
 			scss: {
 				silenceDeprecations: ["import", "mixed-decls", "color-functions", "global-builtin"],
+				// sass-embeddedの使用
 				api: "modern-compiler",
+				// npmパッケージからSassをimportできるように調整
 				importers: [new NodePackageImporter()],
 			},
 		},
