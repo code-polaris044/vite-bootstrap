@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ja" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title itemprop="name">求人システム開発サイト</title>
+	<script type="module" src="./assets/js/common.js"></script>
+	<script type="module" src="./assets/js/script.js"></script>
+	<link rel="stylesheet" href="./assets/css/bootstrap.css">
+</head>
+
+<body>
+	<header class="navbar navbar-light">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="btn btn-warning navbar-toggle hidden-md-up" type="button" data-toggle="collapse"
+					data-target="#header-nav" aria-label="メニューを開く">
+					<span class="fa fa-bars" aria-hidden="true"></span>
+				</button>
+				<h1 class="header-logo">
+					<a href="/">
+						<img src="/assets/img/common/logo.svg" alt="求人システム開発サイト" decoding="async" width="300" height="auto">
+					</a>
+				</h1>
+			</div>
+			<nav class="collapse navbar-toggleable-sm header-nav1" aria-label="メニュー">
+				<ul class="nav navbar-nav">
+					<li><a href="/"><span class="fa fa-home" aria-hidden="true"></span>ホーム</a></li>
+					<li><a href="/job/"><span class="fa fa-building-o" aria-hidden="true"></span>求人検索</a></li>
+					<li><a href="/seminar/"><span class="fa fa-calendar" aria-hidden="true"></span>説明会検索</a></li>
+					<li><a href="/user/"><span class="fa fa-user-o" aria-hidden="true"></span>マイページ</a></li>
+				</ul>
+			</nav>
+			<nav class="collapse header-nav2" id="header-nav" aria-label="メニュー">
+				<ul class="nav navbar-nav">
+					<li><a href="/"><span class="fa fa-home" aria-hidden="true"></span>ホーム</a></li>
+					<li><a href="/job/"><span class="fa fa-building-o" aria-hidden="true"></span>求人検索</a></li>
+					<li><a href="/seminar/"><span class="fa fa-calendar" aria-hidden="true"></span>説明会検索</a></li>
+					<li><a href="/user/"><span class="fa fa-user-o" aria-hidden="true"></span>マイページ</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="lead-header">
+			<div class="container">
+				<form action="/job/" method="get" accept-charset="utf-8" class="form-horizontal">
+					<input type="hidden" name="s" value="1">
+					<div class="input-group">
+						<div class="input-group-addon"><span class="fa fa-search" aria-hidden="true"></span></div>
+						<input type="text" name="cjw" value="" placeholder="求人名・仕事内容などで検索できます" class="form-control">
+						<span class="input-group-btn"><button class="btn btn-primary" type="submit">検索</button></span>
+					</div>
+				</form>
+				<p>つくばで働く皆さまのための求人情報メディア</p>
+			</div>
+			<!-- / .lead-header -->
+		</div>
+	</header>
+
+	<section class="title-section m-t-3">
+		<div class="container ">
+			<h2 class="cheat-sheet-tilte">チートシート一覧</h2>
+		</div>
+		<!-- / .lead-header -->
+	</section>
+
+	<div class="container">
+		<p class="m-b-3">類似している<b>ver4.1</b>になるが、詳細は<a href="https://getbootstrap.jp/docs/4.1/components/"
+				class="in-link">こちら</a>を参照。
+		</p>
+
+		<div class="note m-b-3 alert alert-danger" role="alert">
+			<strong>注意書き (4α版には存在していません)</strong>
+			<ul>
+				<li>primary系・secondary系はボタン以外に使用できません</li>
+				<li>dark系・light系は使用できません</li>
+				<li>btn-outline-系は使用できません</li>
+				<li>Sizingオプション: <a href="https://getbootstrap.com/docs/4.0/utilities/sizing/" class="alert-link">詳細こちら</a></li>
+				<li>table-responsiveのメディアクエリ版: <a href="https://getbootstrap.com/docs/4.0/content/tables/#breakpoint-specific"
+						class="alert-link">詳細こちら</a></li>
+				<li>Border color: <a href="https://getbootstrap.com/docs/4.0/utilities/borders/#border-color"
+						class="alert-link">詳細こちら</a></li>
+			</ul>
+		</div>
+
+		<section style="margin-bottom:60px;">
+			<div class="cheat-seat-subTitle-wrap">
+				<h2 class="head ico cheat-seat-subTitle">
+					<span class="fa fa-file-text" aria-hidden="true"></span>Typography
+				</h2>
+			</div>
+			<div class="cheat-seat-contents m-b-3">
+				<p>詳細は<a href="https://getbootstrap.jp/docs/4.1/content/typography/" target="_blank" class="in-link">こちら</a>を参照。
+				</p>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Headings</h3>
+					<p class="m-b-2">見出し
+						h1 ～ h6 が利用可能です。
+					</p>
+					<h1>h1. Bootstrap heading</h1>
+					<h2>h2. Bootstrap heading</h2>
+					<h3>h3. Bootstrap heading</h3>
+					<h4>h4. Bootstrap heading</h4>
+					<h5>h5. Bootstrap heading</h5>
+					<h6>h6. Bootstrap heading</h6>
+				</div>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Lead</h3>
+					<p class="m-b-2">.lead で文章を目立たせることができます。</p>
+					<p class="lead">
+						Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+					</p>
+				</div>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Inline text elements</h3>
+					<p class="m-b-2">HTML5の一般的なインライン要素でスタイリングされています。</p>
+					<p>You can use the mark tag to <mark>highlight</mark> text.</p>
+					<p><del>This line of text is meant to be treated as deleted text.</del></p>
+					<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+					<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+					<p><u>This line of text will render as underlined</u></p>
+					<p><small>This line of text is meant to be treated as fine print.</small></p>
+					<p><strong>This line rendered as bold text.</strong></p>
+					<p><em>This line rendered as italicized text.</em></p>
+				</div>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Blockquotes</h3>
+					<p class="m-b-2">引用文です。</p>
+					<blockquote class="blockquote">
+						<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+					</blockquote>
+				</div>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Lists</h3>
+					<p class="m-b-2">テキストのリスト表示です。</p>
+					<ul class="list-unstyled">
+						<li>Lorem ipsum dolor sit amet</li>
+						<li>Consectetur adipiscing elit</li>
+						<li>Integer molestie lorem at massa</li>
+						<li>Facilisis in pretium nisl aliquet</li>
+						<li>Nulla volutpat aliquam velit
+							<ul>
+								<li>Phasellus iaculis neque</li>
+								<li>Purus sodales ultricies</li>
+								<li>Vestibulum laoreet porttitor sem</li>
+								<li>Ac tristique libero volutpat at</li>
+							</ul>
+						</li>
+						<li>Faucibus porta lacus fringilla vel</li>
+						<li>Aenean sit amet erat nunc</li>
+						<li>Eget porttitor lorem</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<hr>
+
+		<section style="margin-bottom:60px;">
+			<div class="cheat-seat-subTitle-wrap">
+				<h2 class="head ico cheat-seat-subTitle">
+					<span class="fa fa-file-text" aria-hidden="true"></span>Alerts
+				</h2>
+			</div>
+			<div class="cheat-seat-contents m-b-3">
+				<p>詳細は<a href="https://getbootstrap.jp/docs/4.1/components/alerts/" target="_blank" class="in-link">こちら</a>を参照。
+				</p>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Link color</h3>
+					<p class="m-b-2">
+						.alert-link クラスを適用すると, リンクが適切なカラーになります。
+					</p>
+					<div class="alert alert-success" role="alert">
+						A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+					</div>
+					<div class="alert alert-danger" role="alert">
+						A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+					</div>
+					<div class="alert alert-warning" role="alert">
+						A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+					</div>
+					<div class="alert alert-info" role="alert">
+						A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+					</div>
+				</div>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Dismissing</h3>
+					<p class="m-b-2">
+						アラートのJavaScript plugin を使用すると, アラートインラインを消すことができます。
+					</p>
+					<div class="row-fluid">
+						<ul class="alert alert-success">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							<li>テキストテキストテキストテキストテキストテキストテキストテキスト。</li>
+							<li>テキストテキストテキストテキストテキストテキストテキストテキスト。</li>
+						</ul>
+					</div>
+					<div class="row-fluid">
+						<ul class="alert alert-danger">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							<li>テキストテキストテキストテキストテキストテキストテキストテキスト。</li>
+							<li>テキストテキストテキストテキストテキストテキストテキストテキスト。</li>
+						</ul>
+					</div>
+					<div class="row-fluid">
+						<ul class="alert alert-warning">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							<li>テキストテキストテキストテキストテキストテキストテキストテキスト。</li>
+							<li>テキストテキストテキストテキストテキストテキストテキストテキスト。</li>
+						</ul>
+					</div>
+					<div class="row-fluid">
+						<ul class="alert alert-info">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							<li>テキストテキストテキストテキストテキストテキストテキストテキスト。</li>
+							<li>テキストテキストテキストテキストテキストテキストテキストテキスト。</li>
+						</ul>
+					</div>
+					<hr>
+				</div>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Additional content</h3>
+					<p class="m-b-2">アラートには, 見出し, 段落, 仕切りなどのHTML要素を含めることができます。</p>
+					<div class="alert alert-success" role="alert">
+						<h4 class="alert-heading">Well done!</h4>
+						<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit
+							longer so
+							that you can see how spacing within an alert works with this kind of content.</p>
+						<hr>
+						<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+					</div>
+				</div>
+				<hr>
+			</div>
+		</section>
+
+		<section style="margin-bottom:60px;">
+			<div class="cheat-seat-subTitle-wrap">
+				<h2 class="head ico cheat-seat-subTitle">
+					<span class="fa fa-file-text" aria-hidden="true"></span>Buttons
+				</h2>
+			</div>
+			<div class="cheat-seat-contents m-b-3">
+				<p>詳細は<a href="https://getbootstrap.jp/docs/4.1/components/buttons/" target="_blank" class="in-link">こちら</a>を参照。
+				</p>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Examples</h3>
+					<p class="m-b-2">
+						定義済みのボタンスタイルがあり, それぞれ目的を持っています。
+					</p>
+					<button type="button" class="btn btn-primary">Primary</button>
+					<button type="button" class="btn btn-secondary">Secondary</button>
+					<button type="button" class="btn btn-success">Success</button>
+					<button type="button" class="btn btn-danger">Danger</button>
+					<button type="button" class="btn btn-warning">Warning</button>
+					<button type="button" class="btn btn-info">Info</button>
+					<button type="button" class="btn btn-link">Link</button>
+				</div>
+			</div>
+		</section>
+
+		<section style="margin-bottom:60px;">
+			<div class="cheat-seat-subTitle-wrap">
+				<h2 class="head ico cheat-seat-subTitle">
+					<span class="fa fa-file-text" aria-hidden="true"></span>Grid system
+				</h2>
+			</div>
+			<div class="cheat-seat-contents m-b-3">
+				<p>詳細は<a href="https://getbootstrap.jp/docs/4.1/layout/grid/" target="_blank" class="in-link">こちら</a>を参照。</p>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Auto-layout columns</h3>
+					<p class="m-b-2">
+						明示的に番号を付けられたクラス(例 .col-sm-6 )がなければ, 簡単な列サイズ設定のためにブレークポイント固有の列クラスを利用します。
+					</p>
+					<div class="row">
+						<div class="col-sm-4">.col-sm-4</div>
+						<div class="col-sm-4">.col-sm-4</div>
+						<div class="col-sm-4">.col-sm-4</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">.col-sm-6</div>
+						<div class="col-sm-6">.col-sm-6</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-8">.col-sm-8</div>
+						<div class="col-sm-4">.col-sm-4</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section style="margin-bottom:60px;">
+			<div class="cheat-seat-subTitle-wrap">
+				<h2 class="head ico cheat-seat-subTitle">
+					<span class="fa fa-file-text" aria-hidden="true"></span>Dropdowns
+				</h2>
+			</div>
+			<div class="cheat-seat-contents m-b-3">
+				<p>詳細は<a href="https://getbootstrap.jp/docs/4.1/components/dropdowns/" target="_blank"
+						class="in-link">こちら</a>を参照。
+				</p>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Single button</h3>
+					<p class="m-b-2">
+						.btn はマークアップの変更によってドロップダウントグルに変換できます。
+					</p>
+					<!-- Example single danger button -->
+					<div class="btn-group">
+						<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Action
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Separated link</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section style="margin-bottom:60px;">
+			<div class="cheat-seat-subTitle-wrap">
+				<h2 class="head ico cheat-seat-subTitle">
+					<span class="fa fa-file-text" aria-hidden="true"></span>Modal
+				</h2>
+			</div>
+			<div class="cheat-seat-contents m-b-3">
+				<p>詳細は<a href="https://getbootstrap.jp/docs/4.1/components/modal/" target="_blank" class="in-link">こちら</a>を参照。
+				</p>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Live demo</h3>
+					<p class="m-b-2">
+						下記のボタンをクリックすると, ページの上からスライドしてフェードインしてモーダルが表示されます。
+					</p>
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+						Launch demo modal
+					</button>
+
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									...
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-primary">Save changes</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section style="margin-bottom:60px;">
+			<div class="cheat-seat-subTitle-wrap">
+				<h2 class="head ico cheat-seat-subTitle">
+					<span class="fa fa-file-text" aria-hidden="true"></span>Images
+				</h2>
+			</div>
+			<div class="cheat-seat-contents m-b-3">
+				<p>詳細は<a href="https://getbootstrap.jp/docs/4.1/content/images/" target="_blank" class="in-link">こちら</a>を参照。
+				</p>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Responsive images</h3>
+					<p class="m-b-2">
+						画像をレスポンシブにするには .img-fluid を使用します。 max-width: 100%; , height: auto; を適用すると親要素に比例するレスポンシブが実現出来ます
+					</p>
+					<img src="https://placehold.jp/920x250.png" class="img-fluid" alt="Responsive image">
+				</div>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Figures</h3>
+					<p class="m-b-2">
+						任意のキャプションでコンテンツを表示する必要があるときに使用できます。
+					</p>
+					<figure class="figure">
+						<img src="https://placehold.jp/400x300.png" class="figure-img img-fluid rounded"
+							alt="A generic square placeholder image with rounded corners in a figure.">
+						<figcaption class="figure-caption">A caption for the above image.</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<section style="margin-bottom:60px;">
+			<div class="cheat-seat-subTitle-wrap">
+				<h2 class="head ico cheat-seat-subTitle">
+					<span class="fa fa-file-text" aria-hidden="true"></span>Tables
+				</h2>
+			</div>
+			<div class="cheat-seat-contents m-b-3">
+				<p>詳細は<a href="https://getbootstrap.jp/docs/4.1/content/tables/" target="_blank" class="in-link">こちら</a>を参照。</p>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Auto-layout columns</h3>
+					<p class="m-b-2">
+						テーブルのマークアップについて, .table を基本に解説します。 テーブルスタイルは, bootstrap4で継承されます。ネストされたテーブルは, 親テーブルと同じ方法でスタイルされます。
+					</p>
+					<table class="table" aria-label="Sample Table">
+						<thead class="thead-dark">
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">First</th>
+								<th scope="col">Last</th>
+								<th scope="col">Handle</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Mark</td>
+								<td>Otto</td>
+								<td>@mdo</td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Jacob</td>
+								<td>Thornton</td>
+								<td>@fat</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Larry</td>
+								<td>the Bird</td>
+								<td>@twitter</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Striped rows</h3>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">First</th>
+								<th scope="col">Last</th>
+								<th scope="col">Handle</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Mark</td>
+								<td>Otto</td>
+								<td>@mdo</td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Jacob</td>
+								<td>Thornton</td>
+								<td>@fat</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Larry</td>
+								<td>the Bird</td>
+								<td>@twitter</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Hoverable rows</h3>
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">First</th>
+								<th scope="col">Last</th>
+								<th scope="col">Handle</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Mark</td>
+								<td>Otto</td>
+								<td>@mdo</td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Jacob</td>
+								<td>Thornton</td>
+								<td>@fat</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td colspan="2">Larry the Bird</td>
+								<td>@twitter</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Small table</h3>
+					<table class="table table-sm">
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">First</th>
+								<th scope="col">Last</th>
+								<th scope="col">Handle</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Mark</td>
+								<td>Otto</td>
+								<td>@mdo</td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Jacob</td>
+								<td>Thornton</td>
+								<td>@fat</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td colspan="2">Larry the Bird</td>
+								<td>@twitter</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Always responsive</h3>
+					<div class="bd-example">
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th scope="col">#</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+										<th scope="col">Heading</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+										<td>Cell</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Breakpoint specific</h3>
+					<div class="table-responsive-sm">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">Class</th>
+									<th scope="col">Heading</th>
+									<th scope="col">Heading</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="table-active">
+									<th scope="row">Active</th>
+									<td>Cell</td>
+									<td>Cell</td>
+								</tr>
+								<tr>
+									<th scope="row">Default</th>
+									<td>Cell</td>
+									<td>Cell</td>
+								</tr>
+								<tr class="table-success">
+									<th scope="row">Success</th>
+									<td>Cell</td>
+									<td>Cell</td>
+								</tr>
+								<tr class="table-danger">
+									<th scope="row">Danger</th>
+									<td>Cell</td>
+									<td>Cell</td>
+								</tr>
+								<tr class="table-warning">
+									<th scope="row">Warning</th>
+									<td>Cell</td>
+									<td>Cell</td>
+								</tr>
+								<tr class="table-info">
+									<th scope="row">Info</th>
+									<td>Cell</td>
+									<td>Cell</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section style="margin-bottom:60px;">
+			<div class="cheat-seat-subTitle-wrap">
+				<h2 class="head ico cheat-seat-subTitle">
+					<span class="fa fa-file-text" aria-hidden="true"></span>Responsive utilities
+				</h2>
+			</div>
+			<div class="cheat-seat-contents m-b-3">
+				<p>詳細は<a href="https://getbootstrap.jp/docs/4.1/migration/#responsive-utilities" target="_blank"
+						class="in-link">こちら</a>を参照。</p>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">hidden class</h3>
+					<p class="m-b-2">
+						レスポンシブによる表示と非表示
+					</p>
+					<div class="hidden-md-down text-info">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim tenetur quo natus earum autem hic iusto
+							voluptas maxime numquam, ut minus tempore eos, labore molestiae non deleniti magni cupiditate aliquam.</p>
+					</div>
+					<div class="hidden-md-up text-danger">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim tenetur quo natus earum autem hic iusto
+							voluptas
+							maxime numquam, ut minus tempore eos, labore molestiae non deleniti magni cupiditate aliquam.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section style="margin-bottom:60px;">
+			<div class="cheat-seat-subTitle-wrap">
+				<h2 class="head ico cheat-seat-subTitle">
+					<span class="fa fa-file-text" aria-hidden="true"></span>Text
+				</h2>
+			</div>
+			<div class="cheat-seat-contents m-b-3">
+				<p>詳細は<a href="https://getbootstrap.jp/docs/4.1/utilities/text/#text-alignment" target="_blank"
+						class="in-link">こちら</a>を参照。</p>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">Text alignment</h3>
+					<p class="m-b-2">
+						文字を簡単に配置
+						※text-justify以外は、lgなどのサイズを指定しないと効きませんでした。
+					</p>
+					<p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae est hic eum ullam
+						dolorem facilis ratione exercitationem minima harum fugiat, odio nulla doloremque commodi, quae qui
+						voluptatibus? Deleniti, dolorem voluptatum!
+						Ex similique aspernatur dolorem? Nemo, et voluptatibus magnam non similique quas quo veritatis nulla. Non,
+						quia? Nihil libero inventore aspernatur, laboriosam ut error quis doloribus, dolores est, sunt expedita
+						maiores.
+						Laborum perspiciatis explicabo debitis vitae facilis culpa dolorem tempora sunt ea nostrum voluptas quam quo
+						dolore ad, est eveniet temporibus. Distinctio doloremque aliquam voluptatum, ea sed nesciunt ut optio sint.
+					</p>
+					<p class="text-lg-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae est hic eum ullam
+						dolorem facilis ratione exercitationem minima harum fugiat, odio nulla doloremque commodi, quae qui
+						voluptatibus? Deleniti, dolorem voluptatum!
+						Ex similique aspernatur dolorem? Nemo, et voluptatibus magnam non similique quas quo veritatis nulla. Non,
+						quia? Nihil libero inventore aspernatur, laboriosam ut error quis doloribus, dolores est, sunt expedita
+						maiores.
+						Laborum perspiciatis explicabo debitis vitae facilis culpa dolorem tempora sunt ea nostrum voluptas quam quo
+						dolore ad, est eveniet temporibus. Distinctio doloremque aliquam voluptatum, ea sed nesciunt ut optio sint.
+					</p>
+
+				</div>
+			</div>
+		</section>
+
+		<section style="margin-bottom:60px;">
+			<div class="cheat-seat-subTitle-wrap">
+				<h2 class="head ico cheat-seat-subTitle">
+					<span class="fa fa-file-text" aria-hidden="true"></span>asterisk
+				</h2>
+			</div>
+			<div class="cheat-seat-contents m-b-3">
+				<p>詳細は<a href="https://getbootstrap.jp/docs/4.1/utilities/text/#text-alignment" target="_blank"
+						class="in-link">こちら</a>を参照。</p>
+				<hr>
+				<div class="cheat-seat-subContents m-b-3">
+					<h3 class="cheat-seat-subContents-title m-b-2">asterisk-list</h3>
+					asterisk-listのサンプル
+					</p>
+					<ul class="asterisk-list">
+						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptatum quos incidunt aspernatur culpa
+							dolorum? Quia vitae natus fugiat sit aperiam beatae cumque sapiente veritatis ipsum aliquid? Id, ipsum
+							maiores?</li>
+						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptatum quos incidunt aspernatur culpa
+							dolorum? Quia
+							vitae natus fugiat sit aperiam beatae cumque sapiente veritatis ipsum aliquid? Id, ipsum maiores?</li>
+						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptatum quos incidunt aspernatur culpa
+							dolorum? Quia
+							vitae natus fugiat sit aperiam beatae cumque sapiente veritatis ipsum aliquid? Id, ipsum maiores?</li>
+						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptatum quos incidunt aspernatur culpa
+							dolorum? Quia
+							vitae natus fugiat sit aperiam beatae cumque sapiente veritatis ipsum aliquid? Id, ipsum maiores?</li>
+						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptatum quos incidunt aspernatur culpa
+							dolorum? Quia
+							vitae natus fugiat sit aperiam beatae cumque sapiente veritatis ipsum aliquid? Id, ipsum maiores?</li>
+						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptatum quos incidunt aspernatur culpa
+							dolorum? Quia
+							vitae natus fugiat sit aperiam beatae cumque sapiente veritatis ipsum aliquid? Id, ipsum maiores?</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- /.container -->
+	</div>
+
+	<footer class="footer">
+		<div class="footer-title">
+			<div class="container">
+				<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a href="/" itemprop="item"><span itemprop="name">求人システム開発サイト</span></a>
+						<meta itemprop="position" content="1">
+					</li>
+				</ul>
+			</div>
+			<!-- / .footer-title -->
+		</div>
+		<div class="footer-link">
+			<div class="container">
+				<ul>
+					<li><a href="/">ホーム</a></li>
+					<li><a href="/job/">求人検索</a></li>
+					<li><a href="/user/">マイページ</a></li>
+					<li><a href="http://www.simple-way.co.jp/">会社概要</a></li>
+					<li><a href="/rule/">利用規約</a></li>
+					<li><a href="/privacy/">個人情報の取り扱い</a></li>
+					<li><a href="/staff/">企業の方はこちら</a></li>
+				</ul>
+				<!-- / .container -->
+			</div>
+			<!-- / .footer-title -->
+		</div>
+		<div class="footer-copy">
+			<div class="container">
+				<div class="footer-pagetop"><a href="#"><span class="fa fa-chevron-up" aria-hidden="true"></span></a></div>
+				<div class="logo"><a href="http://www.simple-way.co.jp/"><img src="/assets/img/common/logo_footer.svg"
+							alt="求人システム開発サイト" decoding="async" width="120" height="auto"></a></div>
+				<small>&copy; 2016 - 2025 simpleway corporation.</small>
+			</div>
+			<!-- / .footer-copy -->
+		</div>
+	</footer>
+
+
+	<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/js/vendor/tether.min.js"></script>
+	<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

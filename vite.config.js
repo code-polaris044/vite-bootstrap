@@ -36,8 +36,8 @@ export default {
 		// vite内部で使用されているrollup設定オプション
 		rollupOptions: {
 			input: {
-				main: resolve(__dirname, "resources/js/main.js"),
-				test: resolve(__dirname, "resources/js/test.js"),
+				common: resolve(__dirname, "resources/js/common.js"),
+				script: resolve(__dirname, "resources/js/script.js"),
 				styles: resolve(__dirname, "resources/scss/styles.scss"),
 				bootstrap: resolve(__dirname, "resources/scss/bootstrap.scss"),
 			},

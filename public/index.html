@@ -5,7 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Bootstrap w/ Vite</title>
-	<script type="module" src="./assets/js/main.js"></script>
+	<script type="module" src="./assets/js/common.js"></script>
+	<script type="module" src="./assets/js/script.js"></script>
 	<link rel="stylesheet" href="./assets/css/bootstrap.css">
 </head>
 
@@ -17,6 +18,10 @@
 		<h1>Hello, Bootstrap and Vite!</h1>
 		<button class="btn btn-primary">Primary button</button>
 	</div>
+	<button id="tooltipLightbox" type="button" class="btn btn-secondary btn-lg lightbox-button" data-bs-toggle="modal"
+		data-bs-target="#js-modal" data-bs-placement="bottom" title="画像を一覧で表示する">
+		<i class="fa-solid fa-grip text-danger"></i>
+	</button>
 </body>
 
 </html>
