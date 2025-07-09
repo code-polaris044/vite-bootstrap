@@ -64,6 +64,9 @@ export default {
 	// 開発サーバーの設定
 	server: {
 		port: 8080,
+	}, // 本番用(build後)プレビューサーバー
+	preview: {
+		port: 5000,
 	},
 	// CSS（Sass/SCSS）の設定
 	css: {
