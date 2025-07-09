@@ -23,14 +23,12 @@ const noCrossOrigin = () => {
 export default {
 	// 出力ファイルのパスを相対パスにする
 	base: "./",
-	// プロジェクトの開発ルートディレクトリを "resources" フォルダに設定
-	// root: resolve(__dirname, "resources"),
 	// ビルド設定
 	build: {
 		// 画像やフォントなどをbase64埋め込みせず、必ずファイルとして出力
 		assetsInlineLimit: 0,
 		// ビルド成果物の出力先フォルダ（resourcesの一つ上の "public" フォルダ）
-		outDir: "../public",
+		outDir: "./public",
 		// ビルド前に出力先フォルダを空にしない(systemがあるため)
 		emptyOutDir: false,
 		// vite内部で使用されているrollup設定オプション
@@ -57,8 +55,8 @@ export default {
 		// 静的ファイル（フォントや画像）をビルド時にコピー
 		viteStaticCopy({
 			targets: [
-				{ src: "fonts/*", dest: "assets/fonts" },
-				{ src: "img/*", dest: "assets/img" },
+				{ src: "resources/fonts/*", dest: "assets/fonts" },
+				{ src: "resources/img/*", dest: "assets/img" },
 			],
 		}),
 		// HTMLから crossOrigin 属性を削除する独自プラグイン追記
