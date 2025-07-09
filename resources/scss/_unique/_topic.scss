@@ -1,0 +1,111 @@
+﻿@charset "UTF-8";
+
+// topic
+// ==================================================
+.staff-topic,
+.user-topic {
+	h2.head {
+		margin-bottom: 0;
+	}
+	.topic-list {
+		margin-bottom: 30px;
+		section {
+			border-bottom: solid 1px $gray-light02;
+			a {
+				padding: 30px 0;
+				color: $gray-dark;
+				text-decoration: none;
+				display: block;
+				&:hover {
+					opacity: .6;
+				}
+				h3 {
+					@include fz(20);
+					line-height: 1.5;
+				}
+				.topic-overview {
+					.row {
+						.col-md-3 {
+							color: $brand-warning;
+						}
+						&.text {
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm){
+		.topic-list {
+			margin-bottom: 20px;
+			section {
+				a {
+					padding-top: 20px;
+					padding-bottom: 20px;
+					.topic-overview {
+						margin-top: 10px;
+						.row {
+							margin: 0;
+							[class^="col-"] {
+								@include fz(12);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+// user-topic-detail
+// --------------------------------------------------
+.user-topic-detail,
+.staff-topic-detail {
+	.date {
+		margin: 0 0 20px;
+		padding: 0;
+		li {
+			margin: 0 0 0 20px;
+			padding: 0;
+			@include fz(16);
+			list-style: none;
+			display: inline-block;
+			float: right;
+			.fa {
+				color: $brand-warning;
+			}
+		}
+	}
+	.pic {
+		margin: 0 0 30px 30px;
+		float: right;
+	}
+	p {
+		@include fz(16);
+	}
+
+	@include media-breakpoint-down(sm){
+		.head {
+			margin-bottom: 10px;
+		}
+		.date {
+			margin-bottom: 10px;
+			li {
+				margin: 0 10px 0 0;
+				@include fz(14);
+				float: none;
+			}
+		}
+		.pic {
+			width: 100%;
+			height: auto;
+			margin: 0 0 10px;
+			float: none;
+		}
+	}
+}

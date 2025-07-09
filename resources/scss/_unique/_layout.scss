@@ -1,0 +1,466 @@
+﻿@charset "UTF-8";
+
+// layout
+// ==================================================
+
+
+// アイコン
+// --------------------------------------------------
+.fa {
+	width: 1em;
+	margin-right: .5em;
+	text-align: center;
+}
+
+
+// 見出し
+// --------------------------------------------------
+.head {
+	margin: 0 0 20px;
+	padding: 0 0 8px 2px;
+	@include fz(24);
+	border-bottom: solid 3px $line-color1;
+	position: relative;
+	&:after {
+		width: 100%;
+		height: 0;
+		border-bottom: dotted 3px rgba(#fff, .3);
+		display: block;
+		position: absolute;
+		bottom: -3px;
+		left: 0;
+		z-index: 2;
+		content: ""
+	}
+	&.ico {
+		padding-left: 1.5em;
+		text-indent: -1.5em;
+		.fa {
+			color: $brand-primary;
+			text-indent: 0;
+		}
+	}
+}
+.head-btn {
+	position: relative;
+	.btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+// 見出しが短い時用
+.head-btn-list {
+	position: relative;
+	ul {
+		text-align: right;
+		position: absolute;
+		top: 0;
+		right: 0;
+		li {
+			margin: 0 0 0 .5rem;
+			padding: 0;
+			list-style: none;
+			display: inline-block;
+		}
+	}
+	&.btn-sm-list {
+		ul {
+			top: -.3rem;
+		}
+	}
+
+	@include media-breakpoint-down(sm){
+		ul {
+			margin-top: -10px;
+			position: relative;
+		}
+	}
+}
+
+// 見出しが改行入る時用
+.head-btn-list-long {
+	position: relative;
+	ul {
+		margin: 0;
+		padding: 0;
+		float: right;
+		li {
+			margin: 0 0 0 .5rem;
+			padding: 0;
+			list-style: none;
+			display: inline-block;
+			.btn {
+				position: relative;
+				z-index: 2;
+			}
+		}
+	}
+	.head-btn-position {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	@include media-breakpoint-down(md){
+		ul {
+			float: none;
+			margin: 0 0 20px;
+			li {
+				margin: 0;
+				width: 100%;
+				.btn {
+					width: 100%;
+					padding: 0.25rem 0.75rem;
+				}
+			}
+		}
+		.head-btn-position {
+			position: relative;
+		}
+	}
+
+}
+
+// abstractなど、色付きsection内の見出し付きボタン
+.head-btn-list02 {
+	text-align: right;
+	@include clearfix();
+	h1,
+	h2,
+	h3 {
+		float: left;
+	}
+	ul {
+		margin: 0;
+		text-align: right;
+		padding-left: 0;
+		display: inline-block;
+		li {
+			margin: 0 0 0 .5rem;
+			padding: 0;
+			list-style: none;
+			display: inline-block;
+		}
+	}
+	&.btn-sm-list {
+		ul {
+			li {
+				margin-top: -.7rem;
+				margin-left: .2rem;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm){
+		ul {
+			li {
+				margin-bottom: 8px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+.head-search {
+	margin-bottom: 20px;
+	.head {
+		margin-bottom: 10px;
+	}
+	form {
+		margin: 0;
+		padding: 0;
+		.form-control-sm {
+			padding: 0;
+		}
+		.form-control {
+			padding-top: 0.1rem;
+			padding-bottom: 0.1rem;
+			font-size: .79rem;
+		}
+		.btn {
+			padding-top: 0.1rem;
+			padding-bottom: 0.1rem;
+			font-size: .79rem;
+			.fa {
+				margin-right: 0;
+			}
+		}
+	}
+	@include media-breakpoint-up(sm){
+		position: relative;
+		.head {
+			padding-right: 36%;
+		}
+		form {
+			width: 33.3%;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+}
+
+
+.head-button {
+	margin-top: 58px;
+	.head {
+		margin-bottom: 10px;
+	}
+	a {
+		display: inline-block;
+		margin: 0;
+		padding: 0.1rem 2rem;
+		width: 100%;
+	}
+	@include media-breakpoint-up(sm){
+		margin-bottom: 20px;
+		position: relative;
+		.head {
+			padding-right: 36%;
+		}
+		a {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: auto;
+
+		}
+	}
+}
+
+
+
+.heads {
+	margin: 0 0 20px;
+	padding: 10px 10px 8px;
+	@include fz(16);
+	border-radius: 6px;
+	background: $bg-color1;
+	&.ico {
+		padding-left: 2.0rem;
+		text-indent: -1.5rem;
+		.fa {
+			color: $brand-primary;
+			text-indent: 0;
+		}
+	}
+}
+
+
+
+// btn-top-text
+// --------------------------------------------------
+.btn-top-text {
+	margin-bottom: 30px;
+	@include media-breakpoint-down(sm){
+		margin-bottom: 10px;
+	}
+}
+
+// btn-container
+// --------------------------------------------------
+.btn-container {
+	margin-bottom: 30px;
+	padding: 0;
+	border-radius: 6px;
+	background: $bg-color1;
+	font-size: 0;
+	text-align: center;
+	position: relative;
+	li {
+		margin: 0 5px;
+		padding: 5px 0;
+		list-style: none;
+		display: inline-block;
+		&[class*="col-"] {
+			float: none;
+		}
+		&.back {
+			margin: 0;
+			position: absolute;
+			top: 3px;
+			left: 10px;
+		}
+		&.next {
+			margin: 0;
+			position: absolute;
+			top: 6px;
+			right: 10px;
+			a + a {
+				margin: 0 0 0 5px;
+			}
+		}
+		&.next-static {
+			position: static;
+			text-align: right;
+			margin-left: auto;
+			padding-right: 10px;
+			width: 100%;
+		}
+	}
+	@include media-breakpoint-down(sm){
+		&.btn-container-sm {
+			margin-bottom: 10px;
+			padding: 10px;
+			li {
+				width: 100%;
+				margin: 0 0 10px;
+				padding: 0;
+				display: block;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&.back {
+					position: relative;
+					top: 0;
+					left: 0;
+				}
+				&.next {
+					position: relative;
+					top: 0;
+					right: 0;
+					a + a {
+						margin: 10px 0 0 0;
+					}
+				}
+				a {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+// form-btn-container
+// --------------------------------------------------
+.form-btn-container {
+	margin-bottom: 0;
+	padding: 0;
+	font-size: 0;
+	text-align: center;
+	position: relative;
+	li {
+		margin: 0 10px;
+		list-style: none;
+		display: inline-block;
+		&[class*="col-"] {
+			padding-left: 0;
+			padding-right: 0;
+			float: none;
+			.btn {
+				width: 100%;
+			}
+		}
+		&.back {
+			margin: 0;
+			position: absolute;
+			top:0;
+			left: 0;
+		}
+	}
+	@include media-breakpoint-down(sm){
+		li {
+			margin: 0 0 10px;
+			display: block;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&.back {
+				position: relative;
+			}
+			a,
+			button {
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+}
+
+
+// タブ
+// --------------------------------------------------
+.nav-tabs {
+	margin-bottom: 20px;
+	.bg-faded {
+		border-bottom: none;
+	}
+}
+.default-tab_box01 {
+	position: relative;
+	.default-tab_link {
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+		text-align: right;
+		position: absolute;
+		top: 0;
+		right: 0;
+		li {
+			margin: 0 0 0 5px;
+			padding: 0;
+			font-size: 14px;
+			font-size: 1.4rem;
+			list-style: none;
+			display: inline-block;
+		}
+		@include media-breakpoint-down(sm){
+			position: relative;
+			margin-bottom: 10px;
+			li {
+				display: block;
+				width: 100%;
+				margin: 0;
+				.btn {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// 共通
+// --------------------------------------------------
+.user-register [class*="col-"],
+.user-register td,
+.user-login [class*="col-"],
+.user-login td,
+.staff-register [class*="col-"],
+.staff-register td,
+.staff-login [class*="col-"],
+.staff-login td,
+.job-detail [class*="col-"],
+.job-detail td,
+.job-search [class*="col-"],
+.job-search td {
+	word-break: break-all;
+}
+
+@include media-breakpoint-down(sm){
+	.user-login div.col-md-6 + div.col-md-6,
+	.staff-login div.col-md-6 + div.col-md-6 {
+		margin-top: 30px;
+	}
+}
+
+input[type="file"] {
+	width: 100%;
+}
+
+
+// お気に入りラベル
+// --------------------------------------------------
+.favorite-level{
+	color: $gray-light02;
+	span {
+		color: $brand-warning;
+		text-shadow: 1px 1px 0 rgba(0,0,0,.1);
+	}
+}

@@ -1,0 +1,5 @@
+@mixin font-family {
+	@font-face { font-family: 'MyYuGothicM'; font-weight: normal; src: local("YuGothic-Medium"), local("Yu Gothic Medium"), local("YuGothic Medium"), local("YuGothic-Regular"); }
+	@font-face { font-family: 'MyYuGothicM'; font-weight: bold; src: local("YuGothic-Bold"), local("Yu Gothic"), local("YuGothic Bold"); }
+	font-family: Meiryo, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", MyYuGothicM, "MS PGothic", sans-serif;
+}

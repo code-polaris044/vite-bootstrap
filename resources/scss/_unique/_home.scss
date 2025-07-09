@@ -1,0 +1,119 @@
+﻿@charset "UTF-8";
+
+// home
+// ==================================================
+.home {
+	margin-top: 30px;
+
+
+// home-main
+// --------------------------------------------------
+	.home-main {
+		margin-bottom: 30px;
+		position: relative;
+	}
+	.carousel-bg {
+		position: relative;
+		z-index: 1;
+	}
+	.carousel {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+	.carousel-caption {
+		z-index: 10;
+	}
+	.carousel-item {
+		& > img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			min-width: 100%;
+			height: auto;
+		}
+	}
+	.carousel-indicators {
+		top: 1.5rem;
+		right: 1.5rem;
+		bottom: auto;
+		left: auto;
+		width: 1rem;
+		margin-left: 0;
+		& > li {
+			margin-bottom: .25rem;
+		}
+	}
+
+
+// home-job-search
+// --------------------------------------------------
+	.home-job-search {
+		.head {
+			margin-bottom: 10px;
+			@include fz(20);
+		}
+		.heads {
+			margin-bottom: 10px;
+			@include fz(14);
+		}
+	}
+
+// home-pickup
+// --------------------------------------------------
+	.home-pickup {
+		.head {
+			@include fz(20);
+		}
+		&>.row {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+			&>[class*="col-"] {
+				a {
+					margin: 0 0 20px;
+					@include fz(12);
+					text-decoration: none;
+					display: block;
+					&:hover {
+						opacity: .6;
+					}
+					&>.row {
+						&>[class*="col-"] {
+							img {
+								margin: 0 0 5px;
+							}
+							p {
+								margin: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+		@include media-breakpoint-down(xs){
+			&>.row {
+				&>[class*="col-"] {
+					a {
+						margin: 0 0 10px;
+						&>.row {
+							&>[class*="col-"] {
+								img {
+									margin: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+}

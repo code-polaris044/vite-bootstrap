@@ -1,0 +1,596 @@
+@charset "UTF-8";
+
+// staff
+// ==================================================
+
+.googlemap {
+	height: 300px;
+}
+
+.breadcrumb {
+	li {
+		@include fz(12);
+	}
+}
+
+
+// header
+// --------------------------------------------------
+header {
+	#header-nav {
+		.navbar-nav {
+			float: left;
+			li {
+				width: 5.8em;
+				a {
+					width: 5.8em;
+				}
+			}
+		}
+		.navbar-right {
+			float: right;
+			padding: .8em 0 .5em;
+		}
+
+		.dropdown-menu {
+			padding: 5px;
+			left: auto;
+			right: 0;
+			p {
+				margin-bottom: 0;
+			}
+		}
+
+		.dropdown-menu .divider {
+			height: 1px;
+			margin: 9px 0;
+			overflow: hidden;
+			background-color: $gray-lighter;
+		}
+
+		.dropdown , .link-home {
+			display: inline-block;
+			padding: 5px;
+			a {
+				color: $gray-dark;
+				&:hover,
+				&:visited {
+					text-decoration: none;
+					opacity: .6;
+				}
+			}
+		}
+		.dropdown .name-display {
+			display: inline;
+			@include media-breakpoint-up(xl){
+				max-width: 150px;
+				display: inline-block;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				vertical-align: top;
+				text-decoration: none;
+			}
+		}
+	}
+	@include media-breakpoint-down(lg){
+/*
+		h1 {
+			float: none;
+		}
+		#header-nav {
+			.navbar-nav {
+				border-left: solid 1px $gray-lighter;
+				border-right: solid 1px $gray-lighter;
+				li {
+					width: 100%!important;
+					height: auto;
+					border-top: solid 1px $gray-lighter;
+					display: block;
+					float: none;
+					&:after {
+						display: none;
+					}
+					&:first-child {
+						&:before {
+							display: none;
+						}
+					}
+					a {
+						width: 100%!important;
+						padding: .8em 10px .5em;
+						text-align: left;
+						display: block;
+						position: relative;
+						&:before {
+							margin-right: .3em;
+							color: $brand-warning;
+							font: normal normal normal 14px/1 FontAwesome;
+							display: inline-block;
+							content: "";
+						}
+						&.active {
+							min-height: 0;
+							border-radius: 0;
+							box-shadow: none;
+							z-index: 1;
+							&:after {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+
+			.navbar-right,
+			.navbar-nav {
+				float: none;
+				padding: 0;
+			}
+			.dropdown,
+			.link-home {
+				width: 100%;
+				height: auto;
+				border-top: solid 1px $gray-lighter;
+				border-left: solid 1px $gray-lighter;
+				border-right: solid 1px $gray-lighter;
+				display: block;
+				float: none;
+				padding: .8em 10px .5em;
+			}
+		}
+*/
+	}
+	@include media-breakpoint-down(md){
+		&.navbar {
+			margin-bottom: 20px;
+		}
+		h1 {
+			float: none;
+			display: inline-block;
+		}
+		#header-nav {
+			.navbar-nav {
+				border-left: solid 1px $gray-lighter;
+				border-right: solid 1px $gray-lighter;
+				li {
+					width: 100%!important;
+					height: auto;
+					border-top: solid 1px $gray-lighter;
+					display: block;
+					float: none;
+					&:after {
+						display: none;
+					}
+					&:first-child {
+						&:before {
+							display: none;
+						}
+					}
+					a {
+						width: 100%!important;
+						padding: .8em 10px .5em;
+						text-align: left;
+						display: block;
+						position: relative;
+						&:before {
+							margin-right: .3em;
+							color: $brand-warning;
+							font: normal normal normal 14px/1 FontAwesome;
+							display: inline-block;
+							content: "";
+						}
+						&.active {
+							min-height: 0;
+							border-radius: 0;
+							box-shadow: none;
+							z-index: 1;
+							&:after {
+								display: none;
+							}
+						}
+					}
+
+					&.select-company {
+						.company-name {
+							a {
+								display: inline-block;
+								&:before {
+									display: none;
+								}
+							}
+						}
+						&>a {
+							padding-left: 2em;
+							border-top: dotted 1px $gray-lighter;
+							.fa {
+								display: none;
+							}
+						}
+
+/*
+						.company-name {
+							display: none;
+						}
+						a {
+							border-bottom: solid 1px $gray-lighter;
+							.fa {
+								display: none;
+							}
+						}
+						&>*:last-child {
+							border-bottom: none;
+						}
+*/
+					}
+
+				}
+			}
+
+			.navbar-right,
+			.navbar-nav {
+				float: none;
+				padding: 0;
+			}
+			.dropdown,
+			.link-home {
+				width: 100%;
+				height: auto;
+				border-top: solid 1px $gray-lighter;
+				border-left: solid 1px $gray-lighter;
+				border-right: solid 1px $gray-lighter;
+				display: block;
+				float: none;
+				padding: .8em 10px .5em;
+			}
+		}
+	}
+	@include media-breakpoint-down(sm){
+		&.navbar {
+			margin-bottom: 30px;
+		}
+	}
+	@include media-breakpoint-down(xs){
+		h1 {
+			margin-right: 10px;
+		}
+	}
+	@include media-breakpoint-up(lg){
+		#header-nav {
+			ul {
+				li {
+					&.select-company {
+						width: auto;
+						padding-left: 1.5em;
+						padding-right: 1.5em;
+						@include fz(15);
+						text-align: center;
+						line-height: 1.1;
+						vertical-align: top;
+						.company-name {
+							max-width: 300px;
+							padding-top: 7px;
+							padding-bottom: 7px;
+							color: $gray;
+							@include fz(12);
+							text-align: center;
+							display: block;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+							a {
+								color: $gray;
+							}
+						}
+						a {
+							width: auto;
+							margin-right: 1em;
+							padding: 0;
+							display: inline-block;
+							position: relative;
+							&:hover {
+								text-decoration: none;
+								opacity: .6;
+							}
+							.fa {
+								margin-right: .3em;
+								color: $brand-warning;
+							}
+							&.active {
+								min-height: 0;
+								border-radius: 0;
+								background: none;
+								box-shadow: none;
+								z-index: 1;
+
+								color: $brand-warning;
+
+								&:after {
+									display: none;
+								}
+							}
+						}
+						&>*:last-child {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+
+// sp-select-company
+// --------------------------------------------------
+.sp-select-company {
+	line-height: 1.5;
+	border: solid 1px $gray-lighter;
+	border-radius: 4px;
+	background-color: $gray-lightest;
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	padding: 6px;
+	width: calc(100% - 230px);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	@include media-breakpoint-down(xs){
+		width: calc(100% - 180px);
+		@include fz(13);
+	}
+}
+
+
+
+
+// breadcrumb
+// --------------------------------------------------
+.breadcrumb {
+	@include media-breakpoint-down(md){
+		display: block;
+	}
+	@include media-breakpoint-down(sm){
+		display: none;
+	}
+}
+
+
+
+// table
+// --------------------------------------------------
+.staff-table01 {
+	table {
+		&>thead {
+			&>tr {
+				&>th {
+					background-color: $bg-color1;
+					border-bottom: none;
+					text-align: center;
+					vertical-align: middle;
+					white-space: nowrap;
+					&.th-btn {
+						text-align: right;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+		&>tbody {
+			&>tr {
+				&>td {
+					vertical-align: middle;
+					&:first-child {
+						white-space: nowrap;
+						width: 1%;
+					}
+					&:last-child {
+						width:1px;
+						white-space: nowrap;
+					}
+					p {
+						margin-bottom: 10px;
+					}
+					&>*:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+	.td-unread {
+		width: 5% !important;
+		padding: 15px 0 15px 10px !important;
+		text-align: center;
+		white-space: nowrap;
+	}
+}
+
+// 共通
+// --------------------------------------------------
+[class*="col-"]{
+	word-break: break-all;
+}
+.form-horizontal {
+	.form-section {
+		> *:last-child {
+			[class*="col-"]{
+				min-height: 10px;
+			}
+		}
+	}
+}
+
+// マイページ
+// --------------------------------------------------
+.staff-mypage {
+	.mypage-contents {
+		margin-bottom: 30px;
+		padding: 0 0 10px;
+		border-radius: 6px;
+		border: solid 10px lighten($brand-primary, 39%);
+		background-color: #fff;
+		.heads {
+/*
+			margin: -10px 0 10px;
+			font-weight: normal;
+			border-radius: 0;
+*/
+			margin: 0 0 10px;
+			padding: 0 10px 8px;
+			@include fz(18);
+			border-radius: 0;
+			background: lighten($brand-primary, 39%);
+			&.ico {
+				padding-left: 2.0rem;
+				text-indent: -1.5rem;
+				.fa {
+					color: $brand-primary;
+					text-indent: 0;
+				}
+			}
+		}
+		.row {
+			margin: 0 0 10px;
+			padding-bottom: 10px;
+			border-bottom: solid 1px $gray-lighter;
+			@include clearfix();
+			&:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+				border-bottom: none;
+			}
+		}
+	}
+
+}
+
+// 企業情報
+// --------------------------------------------------
+.staff-company-contract{
+	hr {
+		border-top: 1px dashed rgba(0, 0, 0, 0.1);
+	}
+}
+.staff-company-abstract{
+	.btn-detail {
+		display: block;
+		float: right;
+		margin-top: -4px;
+		text-align: right;
+	}
+	.form-section h3{
+		padding: 5px 10px 10px 0;
+	}
+	p.no-list {
+		padding: 5px 10px;
+	}
+	h1:not(:first-child){
+//		margin-top: 40px;
+	}
+	.company-abstract-unit{
+		margin-bottom: 30px;
+		h1 {
+//			margin-top: 58px;
+		}
+		@include media-breakpoint-up(lg){
+			font-size: 0;
+			> div[class*="col-"] {
+				@include fz(14);
+				float: none;
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+		.form-section {
+			padding-bottom: 0;
+			div.form-group:nth-last-child(2) {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+	.abstract-link {
+		padding: 5px 10px 0 0;
+		text-align: right;
+		a + a {
+			margin-left: 10px;
+		}
+	}
+	.abstract-ellipsis {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		@include media-breakpoint-up(lg){
+			max-width: 1px; /* for ellipsis */
+		}
+	}
+	.company-abstract-list {
+		margin-bottom: 0;
+	}
+
+}
+.staff-company-abstract + .staff-company-abstract {
+	margin-top: 40px;
+}
+
+// お気に入りユーザー
+// --------------------------------------------------
+.staff-user {
+	.favorite-column {
+		@include media-breakpoint-up(lg){
+			text-align: center;
+		}	
+	}
+}
+
+// 求人情報
+// --------------------------------------------------
+.staff-job {
+
+	@media (max-width: 350px) {
+		.form-horizontal .date{
+			.form-control {
+				padding-left: .3rem;
+				padding-right: 0;
+			}
+			.input-group-addon {
+				padding-left: .3rem;
+				padding-right: .3rem;
+			}
+			select.hour {
+				padding-right: 1.4rem;
+			}
+		}
+	}
+
+	.wage_term {
+		padding-right: 0;
+		padding-left: 0;
+		text-align: center;
+	}
+}
+
+// スタッフ情報
+// --------------------------------------------------
+.staff-company-detail {
+	.form-section .head-btn-list02 h3 {
+		padding-top: 5px;
+	}
+}
+
+// 枠にボタンのあるhタグの調整
+// --------------------------------------------------
+.staff-entry-message,
+.staff-job,
+.staff-scout-message {
+	.head-btn-list02{
+		h3 {
+			padding: 5px 10px 10px 0;
+		}
+	}
+}
+

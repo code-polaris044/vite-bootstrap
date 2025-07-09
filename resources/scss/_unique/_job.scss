@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+// Job
+// ==================================================
+
+
+// job-search
+// --------------------------------------------------
+.job-search {
+	.form-horizontal {
+		margin-bottom: 30px;
+		padding: 0 0 10px;
+		border-radius: 6px;
+		border: solid 10px lighten($brand-primary, 39%);
+		background-color: #fff;
+	}
+	.search-add {
+		margin-right: 15px;
+		text-align: right;
+	}
+
+	@include media-breakpoint-down(xs){
+		.form-horizontal {
+			padding-top: 0;
+			.form-group {
+				&>.col-sm-2 {
+					padding: .2rem .75rem;
+					border-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+// job-search_results
+// --------------------------------------------------
+.job-search_results {
+	&>section {
+		.head {
+			a {
+				color: $gray-dark;
+				@include fz(20);
+
+				&:hover {
+					color: $brand-warning;
+					text-decoration: none;
+					.fa {
+						color: $brand-warning;
+					}
+				}
+
+			}
+		}
+		.btn-container {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+
+
+
+// job-info
+// --------------------------------------------------
+.job-info {
+	&>.row {
+		margin-bottom: 20px;
+	}
+	.head {
+		@include fz(20);
+		margin-bottom: 10px;
+	}
+	.catch {
+		margin-bottom: 10px;
+	}
+	.job-overview {
+		.row {
+			.col-md-3 {
+				color: $brand-warning;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm){
+		.job-overview {
+			margin-top: 10px;
+			.row {
+				margin: 0;
+				.col-md-3 {
+					@include fz(12);
+				}
+				.col-md-9 {
+					@include fz(12);
+				}
+			}
+		}
+	}
+}
+
+
+// job-point
+// --------------------------------------------------
+.job-point-list {
+	margin: .3em 0 0;
+	padding: 0;
+	@include clearfix();
+	li {
+		margin: 0 5px 5px 0;
+		padding: .2em .5em .1em;
+		@include fz(13);
+		border-radius: 4px;
+		background-color: rgba($brand-success, .2);
+		list-style: none;
+		display: inline-block;
+		float: left;
+	}
+}
+
+
+// job-detail
+// --------------------------------------------------
+.job-detail {
+	section {
+		margin-bottom: 50px;
+		.btn-container {
+			margin-bottom: 0;
+		}
+	}
+	@include media-breakpoint-down(sm){
+		section {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+
+// job-requirements, application, company
+// --------------------------------------------------
+.job-requirements,
+.job-office,
+.job-treatment,
+.job-application,
+.job-entry,
+.job-contact,
+.job-company {
+	.head {
+		margin-bottom: 10px;
+		@include fz(20);
+	}
+	.table {
+		tbody {
+			tr {
+				th {
+					width: 20%;
+				}
+				td {
+					p {
+						margin-bottom: 10px;
+					}
+					&>*:last-child {
+						margin-bottom: 0;
+					}
+					&.address,
+					&.company-name {
+						p {
+							margin: 0;
+							float: left;
+						}
+						a {
+							margin-left: 1rem;
+							float: right;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-down(xs){
+		.table {
+			tbody {
+				tr {
+					th {
+						width: 100%;
+						padding-bottom: 0.5rem;
+						display: block;
+					}
+					td {
+						padding-top: 0;
+						border-top: none;
+						display: block;
+						&.address,
+						&.company-name {
+							p {
+								margin: 0 0 .75rem;
+							}
+							a {
+								margin: 0 0 .75rem 1rem;
+							}
+						}
+
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// job-appeal
+// --------------------------------------------------
+.job-appeal {
+	.head {
+		@include fz(20);
+	}
+	.row {
+		margin-bottom: 20px;
+		.heads {
+			margin-bottom: 10px;
+		}
+		[class*="col-"] {
+			&>*:last-child {
+				margin-bottom: 0
+			}
+		}
+	}
+	&>*:last-child {
+		margin-bottom: 0
+	}
+}
+
+// job-caption
+// --------------------------------------------------
+.job-caption {
+	.head {
+		@include fz(20);
+		p {
+			margin: 5px 0 0;
+		}
+	}
+}
+
+
+// jobMap
+// --------------------------------------------------
+.job-map {
+	margin-bottom: 20px;
+	[id^="gmap"]{
+		width: 100%;
+		height: 300px;
+		margin-bottom: 10px;
+	}
+}
+
+// calendar
+// --------------------------------------------------
+.checkbox_calendar {
+//	input[type="checkbox"]{
+//		display:none;
+//	}
+	border-bottom: solid 1px $gray-lighter;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	@include media-breakpoint-down(xs){
+		border-bottom: none;
+	}
+	.calendar-block {
+		width: 32%;
+		float: left;
+		margin-right: 2%;
+		display: table;
+		&:last-child {
+			margin-right: 0;
+			float: right;
+		}
+		.calendar-month {
+			background: $bg-color1;
+			font-weight: bold;
+			padding: 5px;
+			display: table-caption;
+			text-align: center;
+		}
+		table.table-calendar {
+			label {
+				width: 100%;
+				margin:0;
+				text-align: center;
+			}
+			label.disabled{
+				opacity: .5;
+			}
+			th {
+				padding: 0.5rem;
+				text-align: center;
+			}
+			td.td-checkbox{
+				padding:0;
+				input:checked {
+					checked:checked;
+				}
+			}
+			td.today{
+				font-weight: bold;
+				background-color: #7edef5;
+			}
+			input + span.onedate{
+				display:block;
+				width: 100%;
+				height: 100%;
+			}
+			td.sun {
+				background-color: #ffeeee;
+			}
+			td.sat {
+				background-color: #eeeeff;
+			}
+			label.label-bgcolor {
+				background-color: #faaaff !important;
+			}
+		}
+		@include media-breakpoint-down(sm){
+			width: 100%;
+			margin: 0;
+			float: none;
+			table.table-calendar {
+				th {
+					padding: 0.2rem;
+				}
+			}
+		}
+	}
+}

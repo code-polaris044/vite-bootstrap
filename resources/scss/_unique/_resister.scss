@@ -1,0 +1,88 @@
+﻿@charset "UTF-8";
+
+// User Resister
+// ==================================================
+
+
+// user-register
+// --------------------------------------------------
+.user-register {
+	.address {
+		display: table;
+	}
+	@media (min-width: 544px){
+		.address {
+			.input-group,
+			.form-inline {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		.address {
+			select {
+				display: block;
+				margin-bottom: 10px;
+			}
+			#user_city,
+			#user_town,
+			#user_street {
+				display: block;
+				margin-bottom: 10px;
+				width: 100%;
+			}
+		}
+	}
+	@media (max-width: 543px) {
+		.name,
+		.ruby,
+		.nickname,
+		.password,
+		.password_check {
+			input {
+				margin-top: 10px;
+			}
+		}
+		.sex,
+		.birthday,
+		.address,
+		.telephone {
+			.input-group {
+				margin-top: 10px;
+			}
+		}
+		.address {
+			select {
+				margin: 10px 0;
+			}
+		}
+		.magazine,
+		.magazine_type {
+			ul {
+				margin-top: 10px;
+				li {
+					width: 50%;
+				}
+			}
+		}
+	}
+	@media (max-width: 370px) {
+		.form-control,
+		.input-group-addon {
+			padding: 4px;
+		}
+	}
+}
+
+/*
+span.required01 {
+	margin: -.2em .5em -.1em 0;
+	padding: .2em .3em .1em;
+	color: #fff;
+	border-radius: 5px;
+	background-color: $brand-warning;
+	display: block;
+	float: left;
+	@include fz(12);
+}
+*/

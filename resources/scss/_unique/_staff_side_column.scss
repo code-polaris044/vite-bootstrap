@@ -1,0 +1,45 @@
+﻿@charset "UTF-8";
+
+// staff-side-column
+// ==================================================
+
+.staff-side-column {
+	@include media-breakpoint-down(sm){
+		margin-top: 30px;
+	}
+
+	.head {
+		@include fz(16);
+	}
+
+	.mypage-message {
+		margin: .65rem 0 30px;
+		p {
+			b {
+				@include fz(16);
+			}
+		}
+		@include media-breakpoint-down(sm){
+			margin-top: 0;
+			.head {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.staff-side-link {
+		margin: .65rem 0 30px;
+		.list-group {
+			margin-bottom: 20px;
+			@include fz(12);
+		}
+		@include media-breakpoint-down(sm){
+			margin-top: 0;
+			.head {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+
+}

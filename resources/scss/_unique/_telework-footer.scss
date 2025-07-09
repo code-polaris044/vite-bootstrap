@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+// footer
+// ==================================================
+footer {
+	.footer-search {
+		margin-top: 60px;
+		padding-top: 30px;
+		border-top: solid 1px $gray-light02;
+		h3 {
+			margin-bottom: 20px;
+			@include fz(20);
+			.fa {
+				color: $brand-primary;
+			}
+		}
+		p {
+			margin-bottom: 30px;
+		}
+		dl {
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+			dt {
+				margin: 0;
+				padding: 0;
+				font-size: $font-size-root;
+			}
+			dd {
+				width: 49.9%;
+				margin: 0;
+				padding: 0;
+				font-size: $font-size-root;
+				display: inline-block;
+				vertical-align: top;
+				.fa {
+					color: $brand-primary;
+				}
+				&.dd-block {
+					width: 100%;
+					display: block;
+				}
+			}
+		}
+
+		@include media-breakpoint-down(md){
+			.row {
+				&>[class^="col-"] {
+					margin-bottom: 10px;
+				}
+				&>*:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		@include media-breakpoint-down(sm){
+			display: none;
+			margin-top: 20px;
+			padding-top: 20px;
+			h3 {
+				margin-bottom: 10px;
+				@include fz(16);
+			}
+			p {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.footer-title {
+		margin-top: 60px;
+		background-color: $brand-primary;
+		.container {
+			padding-top: 5px;
+			padding-bottom: 5px;
+			color: #fff;
+			ul {
+				margin: 0;
+				padding: 0;
+				font-size: 0;
+				li {
+					@include fz(12);
+					display: inline-block;
+					list-style: none;
+					&:after {
+						margin: 0 .4em;
+						content: ">";
+					}
+					a {
+						color: #fff;
+					}
+					&:last-child {
+						&:after {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		@include media-breakpoint-down(sm){
+			margin-top: 20px;
+		}
+	}
+
+	.footer-link {
+		background-color: $bg-color1;
+		.container {
+			padding-top: 5px;
+			padding-bottom: 5px;
+			ul {
+				margin: 0;
+				padding: 0;
+				font-size: 0;
+				li {
+					@include fz(12);
+					list-style: none;
+					display: inline-block;
+					&:after {
+						margin: 0 5px;
+						display: inline-block;
+						content: "｜";
+					}
+					&:last-child {
+						&:after {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		@include media-breakpoint-down(xs){
+			.container {
+				padding: 0;
+				ul {
+					li {
+						width: 50%;
+						&:after {
+							display: none;
+						}
+						a {
+							padding: 5px 10px;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer-copy {
+		.container {
+			padding-top: 15px;
+			padding-bottom: 15px;
+			position: relative;
+			@include clearfix();
+
+			.footer-pagetop {
+				a {
+					width: 48px;
+					height: 48px;
+					color: #fff;
+					@include fz(18);
+					line-height: 1;
+					text-align: center;
+					border-radius: 6px;
+					background-color: $brand-primary;
+					overflow: hidden;
+					display: block;
+					position: fixed;
+					right: 15px;
+					bottom: 15px;
+					z-index: 9999;
+					span {
+						&.fa {
+							margin-top: 15px;
+							margin-right: 0;
+						}
+					}
+					&:hover {
+						opacity: .6;
+					}
+				}
+			}
+			.logo {
+				margin-right: 15px;
+				float: left;
+				a {
+					&:hover {
+						opacity: .6;
+					}
+				}
+			}
+			small {
+				text-transform: capitalize;
+			}
+		}
+		@include media-breakpoint-down(sm){
+			.container {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				.footer-pagetop {
+					a {
+						position: absolute;
+						right: 10px;
+						bottom: 15px;
+					}
+				}
+				.logo {
+					float: none;
+				}
+			}
+		}
+	}
+}
+
+//IE11ハック
+@media all and (-ms-high-contrast:none){
+	*::-ms-backdrop, footer .footer-copy .container .logo img {
+		height: 100%;
+	}
+}

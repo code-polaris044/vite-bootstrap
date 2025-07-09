@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+// Map
+// ==================================================
+
+
+// map-large
+// --------------------------------------------------
+.map-large {
+	padding-top: 20px;
+	.head {
+		margin-bottom: 10px;
+	}
+	[id^="gmap"]{
+		width: 100%;
+		height: 500px;
+		margin-bottom: 10px;
+	}
+
+	.table {
+		margin-bottom: 60px;
+		border: solid 1px $gray-light02;
+		&.view-map {
+			margin-bottom: 15px;
+		}
+		tbody {
+			tr {
+				th {
+					width: 20%;
+					padding: 20px;
+					font-weight: normal;
+					border-color: $gray-light02;
+					background-color: $gray-lighter;
+					vertical-align: top;
+				}
+				td {
+					padding: 20px;
+					border-color: $gray-light02;
+					vertical-align: top;
+					p {
+						margin-bottom: 10px;
+					}
+					&>*:last-child {
+						margin-bottom: 0;
+					}
+					&.address,
+					&.company-name {
+						p {
+							margin: 0;
+							float: left;
+						}
+						a {
+							margin-left: 1rem;
+							float: right;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(lg){
+		.table {
+			tbody {
+				tr {
+					th {
+						width: 25%;
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm){
+		padding-top: 0;
+		[id^="gmap"]{
+			height: 300px;
+		}
+		.table {
+			margin-bottom: 20px;
+			@include fz(12);
+			tbody {
+				tr {
+					th {
+						width: 30%;
+						padding: 10px;
+					}
+					td {
+						padding: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(xs){
+		[id^="gmap"]{
+			height: 200px;
+		}
+		.table {
+			tbody {
+				tr {
+					td {
+						&.address,
+						&.company-name {
+							p {
+								margin: 0 0 .75rem;
+							}
+							a {
+								margin: 0 0 .75rem 1rem;
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+}
+

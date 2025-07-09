@@ -1,0 +1,491 @@
+@charset "UTF-8";
+
+// List
+// ==================================================
+
+.company-list,
+.company-job-list,
+.entry-list,
+.seminar-list,
+.seminar-list02,
+.scout-list,
+.scout-user-list,
+.company-staff-list,
+.company-abstract-list,
+.favorite-list {
+	margin-bottom: 30px;
+	.check-all-top {
+		margin-bottom: 5px;
+		padding-left: 10px;
+	}
+	.check-all-bottom {
+		margin-top: -20px;
+		padding-left: 10px;
+	}
+
+	.list-body {
+		margin-bottom: 30px;
+		&>.row {
+			padding-top: 0.75rem;
+			padding-bottom: 0.75rem;
+			&>[class*="col-"] {
+				p {
+					margin-bottom: 10px;
+				}
+				&.check-col {
+					label {
+						margin-top: -0.75rem;
+						margin-bottom: -0.75rem;
+						padding: 0.75rem 10px;
+						display: block;
+						cursor: pointer;
+						@include media-breakpoint-down(md){
+							margin: 0;
+							padding: 0;
+						}
+					}
+				}
+			}
+			&>*:first-child{
+				z-index: 1;
+			}
+		}
+		&>*:nth-child(even) {
+			background-color: $table-bg-accent;
+		}
+		&>.row.active {
+			background-color: lighten($brand-primary, 40%);
+		}
+
+	}
+	@include media-breakpoint-down(md){
+		.list-body {
+			border-bottom: solid 1px $gray-lighter;
+			&>.row {
+				border-top: solid 1px $gray-lighter;
+				&>[class*="col-"],
+				&>.mail-row [class*="col-"] {
+					p {
+						margin: 0;
+					}
+					.btn {
+						margin-top: 10px;
+						display: block;
+						&.btn-inline-block {
+							display: inline-block;
+						}
+					}
+					&>.row {
+						margin-left: 0;
+						margin-right: 0;
+						&>[class*="col-"] {
+							padding-left: 0;
+							padding-right: 0;
+							@include fz(11);
+							&.hidden-lg-up.text-xs-right {
+								&:after {
+									margin: 0 .2em;
+									content: "：";
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm){
+		.check-all-top {
+			padding-left: 0;
+		}
+		.check-all-bottom {
+			padding-left: 0;
+		}
+		.list-body {
+			border-bottom: none;
+			&>*:last-child {
+				border-bottom: solid 1px $gray-lighter;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(md){
+		.list-body {
+			&>.row {
+				margin-left: 0;
+				margin-right: 0;
+				&>[class*="col-"] {
+					&.list-body-head {
+						@include fz(20);
+					}
+					&>.row {
+						&>[class*="col-"] {
+							@include fz(14);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(lg){
+		.list-head {
+			margin-left: 10px;
+			margin-right: 10px;
+			.row {
+				padding-top: 0.75rem;
+				padding-bottom: 0.75rem;
+				border-top: solid 1px $gray-lighter;
+				border-bottom: solid 1px $gray-lighter;
+				background: $bg-color1;
+				[class*="col-"] {
+					@include fz(12);
+					text-align: center;
+				}
+			}
+		}
+		.list-body {
+			&>.row {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+				display: table;
+				border-bottom: solid 1px $gray-lighter;
+				&>[class*="col-"],
+				&>.mail-row [class*="col-"] {
+					float: none;
+					display: table-cell;
+					vertical-align: middle;
+					&.list-body-head {
+						@include fz(14);
+					}
+					&>.row {
+						&>[class*="col-"] {
+							&.small {
+								font-size: 80%;
+							}
+							&.block {
+								display: block;
+							}
+						}
+					}
+					.btn {
+						display: inline-block;
+					}
+					&>*:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+.company-list,
+.company-job-list,
+.seminar-list02 {
+	.list-body {
+		&>.row {
+			padding-top:7px;
+			padding-bottom:7px;
+		}
+	}
+}
+
+
+
+.entry-list-select,
+.seminar-list-select,
+.scout-list-select {
+	margin: 0 0 20px;
+}
+
+.entry-list-search,
+.seminar-list-search,
+.scout-list-search,
+.scout-user-list-search {
+	padding: 0 0 10px;
+	border-radius: 6px;
+	border: solid 10px lighten($brand-primary, 39%);
+	background-color: #fff;
+	.heads {
+		margin: 0 0 10px;
+		padding: 0 10px 8px;
+		@include fz(18);
+		border-radius: 0;
+		background: lighten($brand-primary, 39%);
+		&.ico {
+			padding-left: 2.0rem;
+			text-indent: -1.5rem;
+			.fa {
+				color: $brand-primary;
+				text-indent: 0;
+			}
+		}
+	}
+	.form-btn-container {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	@include media-breakpoint-down(xs){
+		.heads {
+			margin-bottom: 0;
+		}
+		.form-horizontal {
+			padding-top: 0;
+			.form-group {
+				&>[class*="col-sm-"] {
+					padding: .2rem .75rem;
+					border-radius: 0;
+				}
+			}
+			.btn {
+				width: calc(100% - 20px);
+				margin: 0;
+				display: block;
+			}
+		}
+	}
+}
+
+.entry-list-search,
+.scout-list-search {
+	@media (max-width: 370px){
+		.form-horizontal .date {
+			.form-control {
+				@include fz(13);
+				padding-left: .3rem;
+			}
+			.input-group-addon {
+				@include fz(13);
+				padding-left: .3rem;
+				padding-right: .3rem;
+			}
+		}
+	}
+}
+
+.company-abstract-list {
+	@include media-breakpoint-down(md){
+		.list-body {
+			&>.row {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+
+
+
+// depth-list
+// --------------------------------------------------
+.business-depth-list,
+.content-depth-list {
+	.depth-1 {
+		width: 100%;
+		margin: 5px 0;
+		padding: 3px 10px;
+		display: block;
+		background-color: $gray-lightest;
+	}
+	.depth-2 {
+		padding-left: 2em;
+	}
+	.depth-3 {
+		padding-left: 4em;
+	}
+	.depth-4 {
+		padding-left: 6em;
+	}
+	.depth-5 {
+		padding-left: 8em;
+	}
+	&.max-depth-3 {
+		.depth-2 {
+			width: 100%;
+		}
+	}
+	&>*:first-child {
+		margin-top: 0;
+	}
+
+}
+
+
+
+// collapse-list
+// --------------------------------------------------
+.collapse-list {
+	.group-head {
+		margin: 5px 0;
+		padding: 3px 10px;
+		background-color: $gray-lightest;
+		cursor: pointer;
+		@include clearfix();
+		.btn {
+			margin-top: .2em;
+			margin-left: 10px;
+			padding: 1px 7px;
+			color: $gray;
+			@include fz(11);
+			border-radius: 4px;
+			float:right;
+			.fa {
+				margin-right: 0;
+			}
+		}
+
+		&[aria-expanded="false"] {
+			.fa-chevron-down:before {
+				content: "\f078";
+			}
+		}
+		&[aria-expanded="true"] {
+			.fa-chevron-down:before {
+				content: "\f077";
+			}
+		}
+
+	}
+	.row {
+		margin-left: .5rem;
+		margin-bottom: 20px;
+	}
+	&>*:first-child {
+		margin-top: 0;
+	}
+	&>*:last-child {
+		.row {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+
+// collapse-list02
+// --------------------------------------------------
+.collapse-list02 {
+	.group-head {
+		position: relative;
+		cursor: pointer;
+		@include clearfix();
+		.btn {
+			margin-top: .2em;
+			margin-left: 10px;
+			padding: 1px 7px;
+			color: $gray;
+			@include fz(11);
+			border-radius: 4px;
+			float:right;
+			.fa {
+				margin-right: 0;
+			}
+		}
+
+		&[aria-expanded="false"] {
+			.fa-chevron-down:before {
+				content: "\f078";
+			}
+		}
+		&[aria-expanded="true"] {
+			.fa-chevron-down:before {
+				content: "\f077";
+			}
+		}
+		&+label {
+			position: absolute;
+			top: 3px;
+			left: 10px;
+		}
+	}
+
+	.group-head-parent {
+		width: 100%;
+		margin: 5px 0;
+		padding: 3px 10px;
+		background-color: $gray-lightest;
+		&.depth-2 {
+			label {
+				left: 2em;
+			}
+		}
+		&.depth-3 {
+			label {
+				left: 4em;
+			}
+		}
+		&.depth-4 {
+			label {
+				left: 6em;
+			}
+		}
+	}
+
+
+	.row {
+		margin-left: .5rem;
+		margin-bottom: 20px;
+	}
+	&>*:first-child {
+		margin-top: 0;
+	}
+	&>*:last-child {
+		.row {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+
+
+// message-box
+// --------------------------------------------------
+.message-box {
+	.list-body {
+		font-size: 80%;
+		a {
+			color: $gray-dark;
+			padding: 0.75rem 0;
+		}
+		> .row {
+			padding: 0;
+			> .mail-row {
+				text-decoration: none;
+				&:hover{
+					background-color: darken($gray-lighter, 3%);
+					text-decoration: none;
+				}
+			}
+		}
+
+		@include media-breakpoint-up(lg){
+			> .row {
+				> .mail-row {
+					display: table;
+					width: 100%;
+					[class*="col-"] {
+						float: left;
+						display: inline-block;
+						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+					}
+				}
+			}
+		}
+		@include media-breakpoint-down(md){
+			> .row {
+				padding: 0;
+				> .mail-row {
+					display: block;
+				}
+			}
+		}
+
+	}
+}

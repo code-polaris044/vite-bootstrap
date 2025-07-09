@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+// Message
+// ==================================================
+
+.state-unread {
+	padding: .2em .5em 0;
+	margin-left: .5em;
+	color: #fff;
+	@include fz(11);
+	line-height: 1.5;
+	border-radius: 4px;
+	background-color: $brand-danger;
+	display: inline-block;
+	vertical-align: top;
+	font-weight: normal;
+	margin-top: 3px;
+}
+.state-read {
+	padding: .2em .5em 0;
+	margin-left: .5em;
+	color: #fff;
+	@include fz(11);
+	line-height: 1.5;
+	border-radius: 4px;
+	background-color: $gray-light;
+	display: inline-block;
+	vertical-align: top;
+	font-weight: normal;
+	margin-top: 3px;
+}
+.state-receive {
+	padding: .2em .5em 0;
+	color: #fff;
+	@include fz(11);
+	line-height: 1.5;
+	border-radius: 4px;
+	background-color: $brand-warning;
+	display: inline-block;
+	vertical-align: top;
+	font-weight: normal;
+	margin-top: 3px;
+}
+.state-send {
+	padding: .2em .5em 0;
+	color: #fff;
+	@include fz(11);
+	line-height: 1.5;
+	border-radius: 4px;
+	background-color: $brand-success;
+	display: inline-block;
+	vertical-align: top;
+	font-weight: normal;
+	margin-top: 3px;
+}
+.message-from {
+	width: calc(100% - 5.9rem);
+	display: inline-block;
+}
+.message-list {
+	&.form-horizontal{
+		.form-section {
+			margin: 30px 0 0;
+			padding: 0 0 10px;
+			border-radius: 6px;
+			//border: solid 10px lighten($brand-primary, 39%);
+			background-color: #fff;
+			h3 {
+				margin: 0;
+				padding: 0 0 8px;
+				@include fz(16);
+				line-height: 1.5;
+				//background: lighten($brand-primary, 39%);
+			}
+			.message-list-body {
+				.message-list-date {
+					margin: 0;
+					padding: 2px 5px 2px 0;
+					@include fz(14);
+					border-bottom:1px solid $gray-light02;
+				}
+				p {
+					margin: 0;
+					padding: 10px 10px 0;
+				}
+			}
+		}
+	}
+/*
+	section {
+		margin: 30px 0 0;
+		padding: 0 0 10px;
+		border-radius: 6px;
+		border: solid 10px lighten($brand-primary, 39%);
+		background-color: #fff;
+		h3 {
+			margin: 0;
+			padding: 0 0 8px;
+			@include fz(16);
+			line-height: 1.5;
+			background: lighten($brand-primary, 39%);
+		}
+		.message-list-body {
+			h4 {
+				margin: 0;
+				padding: 10px 10px 8px;
+				@include fz(14);
+				background: $bg-color1;
+			}
+			p {
+				margin: 0;
+				padding: 10px 10px 0;
+			}
+		}
+	}
+*/
+}
+
+.side-message-list {
+	.list-group {
+		a {
+			padding-left: 2.5rem;
+			text-indent: -1.5em;
+			span {
+				text-indent: 0;
+			}
+		}
+	}
+}

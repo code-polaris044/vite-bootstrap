@@ -1,0 +1,30 @@
+﻿@charset "UTF-8";
+
+// breadcrumb
+// ==================================================
+.breadcrumb {
+	padding: 0;
+	margin-bottom: 20px;
+	list-style: none;
+	background-color: transparent;
+	border-radius: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	&> li {
+		@include fz(0);
+		float: none;
+		display: inline;
+		& + li:before {
+			@include fz(12);
+			content: ">";
+		}
+		a,
+		span {
+			@include fz(12);
+		}
+	}
+	@include media-breakpoint-down(md){
+		display: none;
+	}
+}

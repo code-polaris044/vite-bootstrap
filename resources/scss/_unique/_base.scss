@@ -1,0 +1,101 @@
+﻿@charset "UTF-8";
+
+// 汎用
+// ==================================================
+
+
+
+// bootstrap再設定
+// --------------------------------------------------
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.alert {
+	padding-left: 30px;
+	.close {
+		line-height: 1.5;
+	}
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+	margin-top: .5rem;
+}
+
+.btn-xs {
+	padding: 0 .75rem;
+	@include fz(12);
+	line-height: 2;
+	border-radius: .2rem;
+}
+.btn-xlg {
+	padding: .75rem 1.25rem;
+	@include fz(20);
+	line-height: 1.33333;
+	border-radius: .3rem;
+}
+.container {
+	padding: 0;
+	@include media-breakpoint-down(md){
+		padding:0 10px;
+	}
+}
+.container-fluid {
+	padding: 0 20px;
+	@include media-breakpoint-down(sm){
+		padding:0 10px;
+	}
+}
+.navbar-toggleable-lg {
+	@include media-breakpoint-up(xl){
+		display: block !important;
+	}
+}
+.table-responsive {
+	-webkit-overflow-scrolling: touch;
+}
+.list-group {
+	.list-group-item {
+		.label-pill {
+			margin-top: .5rem;
+		}
+	}
+}
+
+.text-nowrap-sp {
+	white-space: normal !important;
+	@include media-breakpoint-down(sm){
+		white-space: nowrap !important;
+	}
+}
+
+body {
+	@include font-family;
+}
+
+// list
+// ==================================================
+.asterisk-list {
+	> li {
+		list-style-type: none;
+		text-indent: -1em;
+		&:before {
+			content: "※";
+		}
+	}
+}
+
+// line
+// ==================================================
+.line-double {
+	border-top: 4px double rgba(0, 0, 0, 0.1);
+}
+
+// label
+// ==================================================
+.label{
+	text-indent: 0;
+}

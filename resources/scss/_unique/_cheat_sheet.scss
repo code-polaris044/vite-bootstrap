@@ -1,0 +1,35 @@
+﻿@charset "UTF-8";
+
+// cheat-sheet
+// ==================================================
+
+.cheat-seat-subTitle-wrap {
+		position:-webkit-sticky;
+		position:sticky;
+		top:0;
+		z-index: 1;
+	}
+
+.cheat-seat-subTitle {
+	border-bottom: none;
+
+	&::after {
+		border-bottom: none;
+    bottom: none;
+    display: none;
+    height: initial;
+    left: initial;
+    position: none;
+    width: 100%;
+    z-index: none;
+	}
+}
+
+.bd-example {
+	margin-inline: auto;
+}
+
+.row div {
+ background-color: $bg-color1;
+}
+

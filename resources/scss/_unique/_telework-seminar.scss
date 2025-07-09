@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+.btn-xxs {
+	@include fz(12);
+	padding: .1em .75em 0;
+	box-shadow: none;
+}
+
+
+// seminar-search_results
+// ==================================================
+.seminar-search_results {
+	.schedule {
+		hr {
+			margin-top: 0;
+			border-top: solid 1px $gray-lighter;
+		}
+	}
+
+}
+
+
+
+// seminar-list
+// ==================================================
+.seminar-list {
+	margin-bottom: 30px;
+	border: solid 1px $gray-light02;
+	.list-head {
+		&>.row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	.list-body {
+		&>.row {
+			margin-left: 0;
+			margin-right: 0;
+			padding-top: 0.75rem;
+			padding-bottom: 0.75rem;
+			&>[class*="col-"] {
+				&.seminar-entry {
+					color: $brand-danger;
+				}
+				p {
+					margin-bottom: 10px;
+				}
+			}
+		}
+		&>*:nth-child(even) {
+			background-color: $table-bg-accent;
+		}
+	}
+	@include media-breakpoint-down(md){
+		.list-body {
+//			border-bottom: solid 1px $gray-lighter;
+			&>.row {
+				padding-top: 0;
+				border-bottom: solid 1px $gray-light02;
+				&>[class*="col-"] {
+					&.list-body-head {
+						padding-top: 5px;
+						padding-bottom: 5px;
+						font-weight: bold;
+						text-align: center;
+						background: $gray-lighter;
+					}
+					&.seminar-entry {
+						margin-top: 10px;
+						span {
+							border-radius: 5px;
+							background: rgba($brand-danger, .1);
+							display: block;
+						}
+					}
+					p {
+						margin: 0;
+					}
+					.btn {
+//						margin-top: 10px;
+						display: block;
+					}
+					.map {
+						display:inline-block;
+					}
+					&>.row {
+						margin-left: 0;
+						margin-right: 0;
+						&>[class*="col-"] {
+							padding-left: 0;
+							padding-right: 0;
+							@include fz(11);
+							&.hidden-lg-up.text-xs-right {
+								&:after {
+									margin: 0 .2em;
+									content: "：";
+								}
+							}
+						}
+					}
+				}
+			}
+			&>*:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm){
+		.list-body {
+			border-bottom: none;
+			&>*:last-child {
+				border-bottom: solid 1px $gray-lighter;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(md){
+		.list-body {
+			&>.row {
+				&>[class*="col-"] {
+					&.list-body-head {
+						@include fz(20);
+					}
+					&>.row {
+						&>[class*="col-"] {
+							@include fz(14);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(lg){
+		.list-head {
+			.row {
+				padding-top: 0.75rem;
+				padding-bottom: 0.75rem;
+				background: $gray-lighter;
+				[class*="col-"] {
+					@include fz(12);
+					text-align: center;
+				}
+			}
+		}
+		.list-body {
+			&>.row {
+				width: 100%;
+				display: table;
+				border-bottom: solid 1px $gray-lighter;
+				&>[class*="col-"] {
+					float: none;
+					display: table-cell;
+					vertical-align: middle;
+					&.list-body-head {
+						@include fz(14);
+					}
+					&.seminar-entry {
+						@include fz(14);
+					}
+					&>.row {
+						&>[class*="col-"] {
+							&.small {
+								font-size: 80%;
+							}
+						}
+					}
+					.btn {
+						display: inline-block;
+					}
+					&>*:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+			&>*:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+
+
+// seminar-company
+// ==================================================
+.seminar-company {
+	section {
+		border-bottom: solid 1px $gray-light02;
+		a {
+			padding: 30px 0;
+			display: block;
+			text-decoration: none;
+			&:hover {
+				opacity: .6;
+			}
+			h3 {
+				@include fz(24);
+				line-height: 1.3;
+				margin-bottom: 10px;
+			}
+			.catch {
+				margin-bottom: 15px;
+				color: $gray-dark;
+				line-height: 1.5;
+			}
+			hr {
+				border-top: solid 1px $gray-lighter;
+			}
+			&>.row {
+				.row {
+					color: $gray-dark;
+					line-height: 1.5;
+					[class^="col-"] {
+						.row {
+							@include fz(16);
+//							margin-bottom: 20px;
+						}
+						&>*:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+
+		}
+	}
+	&>*:first-child {
+		a {
+			padding-top: 0;
+		}
+	}
+	&>*:last-child {
+		border-bottom: none;
+	}
+
+	@include media-breakpoint-down(sm){
+		section {
+			&>a {
+				h3 {
+					@include fz(20);
+				}
+				.catch {
+					margin-bottom: 10px;
+				}
+				&>.row {
+					.row {
+						[class^="col-"] {
+							.row {
+								@include fz(14);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(xs){
+		section {
+			&>a {
+				padding-top: 20px;
+				padding-bottom: 20px;
+				&>.row {
+					[class^="col-"] {
+						&.pic {
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

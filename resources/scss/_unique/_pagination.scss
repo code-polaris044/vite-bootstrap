@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+// Pagination
+// ==================================================
+
+.nav-pagination {
+	margin-bottom: 1em;
+	text-align: right;
+	@include clearfix();
+	p {
+		margin: 0;
+		padding-top: .3em;
+		float: left;
+		.fa {
+			color: $brand-primary;
+		}
+	}
+	.pagination {
+		margin: 0;
+		li {
+			a {
+				color: $gray-dark;
+				text-decoration: none;
+			}
+			&.next {
+				.fa {
+					margin: 0 0 0 .5em;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md){
+		text-align: center;
+		p {
+			margin: 0 0 .5em;
+			padding-top: 0;
+			float: none;
+		}
+		.pagination {
+			margin: 0;
+			li {
+				display: none;
+				&.previous,
+				&.next,
+				&.active {
+					display: inline;
+				}
+				a {
+					text-decoration: none;
+				}
+				&.next {
+					.fa {
+						margin: 0 0 0 .5em;
+					}
+				}
+			}
+		}
+	}
+}
