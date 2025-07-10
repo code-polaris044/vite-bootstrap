@@ -39,6 +39,7 @@
 		"browserlist": "^1.0.1",
 		"cross-env": "^7.0.3",
 		"editorconfig": "^3.0.1",
+		"flatpickr": "^4.6.13",
 		"markuplint": "^4.12.0",
 		"prettier": "^3.6.2",
 		"sass-embedded": "^1.89.2",
