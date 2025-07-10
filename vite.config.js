@@ -53,6 +53,8 @@ export default {
 				styles: resolve(__dirname, "resources/scss/styles.scss"),
 				bootstrap: resolve(__dirname, "resources/scss/bootstrap.scss"),
 			},
+			//viteの静的ファイルの置き場所の名前がpublicなの重複解除
+			publicDir: "",
 			output: {
 				// JSファイルの出力設定
 				entryFileNames: "assets/js/[name].js",
@@ -62,20 +64,13 @@ export default {
 					if (assetInfo.name && assetInfo.name.endsWith(".css")) {
 						return "assets/css/[name][extname]";
 					}
-					return "assets/[name][extname]";
+					// return "assets/[name][extname]";
 				},
 			},
 		},
 	},
 	// プラグインの設定
 	plugins: [
-		// 静的ファイル（フォントや画像）をビルド時にコピー
-		viteStaticCopy({
-			targets: [
-				{ src: "resources/fonts/*", dest: "assets/fonts" },
-				{ src: "resources/img/*", dest: "assets/img" },
-			],
-		}),
 		// HTMLから crossOrigin 属性を削除する独自プラグイン追記
 		noCrossOrigin(),
 	],
