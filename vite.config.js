@@ -91,7 +91,7 @@ export default {
 		preprocessorOptions: {
 			// 古い書き方の警告を非表示にするリスト
 			scss: {
-				silenceDeprecations: ["import", "mixed-decls", "color-functions", "global-builtin"],
+				silenceDeprecations: ["import", "mixed-decls", "color-functions", "global-builtin", "legacy-js-api"],
 				// sass-embeddedの使用
 				api: "modern-compiler",
 				// npmパッケージからSassをimportできるように調整
