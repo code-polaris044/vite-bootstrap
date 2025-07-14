@@ -23,6 +23,8 @@ const noCrossOrigin = () => {
 export default {
 	// 出力ファイルのパスを相対パスにする
 	base: "./",
+	//viteの静的ファイルの置き場所の名前がpublicなの重複解除
+	publicDir: false,
 	// ビルド設定
 	build: {
 		// 画像やフォントなどをbase64埋め込みせず、必ずファイルとして出力
@@ -53,8 +55,6 @@ export default {
 				styles: resolve(__dirname, "resources/scss/styles.scss"),
 				bootstrap: resolve(__dirname, "resources/scss/bootstrap.scss"),
 			},
-			//viteの静的ファイルの置き場所の名前がpublicなの重複解除
-			publicDir: "",
 			output: {
 				// JSファイルの出力設定
 				entryFileNames: "assets/js/[name].js",
@@ -72,6 +72,13 @@ export default {
 	// プラグインの設定
 	plugins: [
 		// HTMLから crossOrigin 属性を削除する独自プラグイン追記
+		//後ほど対応
+		// viteStaticCopy({
+		// 	targets: [
+		// 		{ src: "fonts/*", dest: "assets/fonts" },
+		// 		{ src: "img/*", dest: "assets/img" },
+		// 	],
+		// }),
 		noCrossOrigin(),
 	],
 	// 開発サーバーの設定
