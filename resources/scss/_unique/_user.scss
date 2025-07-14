@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @charset "UTF-8";
 
 // User
@@ -166,7 +168,7 @@ header {
 		margin-bottom: 20px;
 		padding: 0 0 10px;
 		border-radius: 6px;
-		border: solid 10px lighten($brand-primary, 39%);
+		border: solid 10px color.adjust($brand-primary, $lightness: 39%, $space: hsl);
 
 
 		background-color: #fff;
@@ -175,7 +177,7 @@ header {
 			padding: 0 10px 8px;
 			@include fz(18);
 			border-radius: 0;
-			background: lighten($brand-primary, 39%);
+			background: color.adjust($brand-primary, $lightness: 39%, $space: hsl);
 			&.ico {
 				padding-left: 2.0rem;
 				text-indent: -1.5rem;
@@ -535,7 +537,7 @@ header {
 			background-color: #faaaff !important;
 		}
 		td.exists-plans{
-			background-color: lighten( $brand-warning, 40% );
+			background-color: color.adjust( $brand-warning, $lightness: 40%, $space: hsl );
 		}
 		.display-weekday {
 			display: none;
@@ -817,7 +819,7 @@ header {
 					a {
 						color: #fff;
 						background-color: $brand-primary;
-						box-shadow: 0 3px darken($brand-primary, 15%);
+						box-shadow: 0 3px color.adjust($brand-primary, $lightness: -15%, $space: hsl);
 					}
 				}
 				&.previous {
@@ -1017,19 +1019,19 @@ header {
 	}
 
 	.btn-primary {
-		box-shadow: 0 3px darken($brand-primary, 15%);
+		box-shadow: 0 3px color.adjust($brand-primary, $lightness: -15%, $space: hsl);
 		.free {
 			color: $brand-primary;
 		}
 	}
 	.btn-danger {
-		box-shadow: 0 3px darken($brand-danger, 15%);
+		box-shadow: 0 3px color.adjust($brand-danger, $lightness: -15%, $space: hsl);
 		.free {
 			color: $brand-danger;
 		}
 	}
 	.btn-warning {
-		box-shadow: 0 3px darken($brand-warning, 15%);
+		box-shadow: 0 3px color.adjust($brand-warning, $lightness: -15%, $space: hsl);
 		.free {
 			color: $brand-warning;
 		}

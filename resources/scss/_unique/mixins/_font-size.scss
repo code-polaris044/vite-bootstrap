@@ -1,4 +1,6 @@
+@use "sass:math";
+
 @mixin fz($size) {
 	font-size: $size + px;
-	font-size: ($size / $font-size-root2) * 1rem;
+	font-size: math.div($size, $font-size-root2) * 1rem;
 }

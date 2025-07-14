@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @charset "UTF-8";
 // Variables
 //
@@ -27,6 +29,8 @@
 //
 // Grayscale and brand colors for use across Bootstrap.
 
+@use "sass:math";
+
 $gray-dark:                 #373a3c !default;
 $gray:                      #666 !default;
 $gray-light:                #818a91 !default;
@@ -42,7 +46,7 @@ $gray-lightest03:           #f9f9f9 !default;
 //$brand-info:                #5bc0de !default;
 //$brand-warning:             #f0ad4e !default;
 //$brand-danger:              #d9534f !default;
-$brand-primary:             darken(#55DAF9, 15%) !default;
+$brand-primary:             color.adjust(#55DAF9, $lightness: -15%, $space: hsl) !default;
 $brand-success:             #5cb85c !default;
 $brand-info:                #0275d8 !default;
 $brand-warning:             #F19317 !default;
@@ -106,7 +110,7 @@ $body-color:                 $gray-dark !default;
 //$link-color:                 $brand-primary !default;
 $link-color:                 #06C !default;
 $link-decoration:            none !default;
-$link-hover-color:           darken($link-color, 15%) !default;
+$link-hover-color:           color.adjust($link-color, $lightness: -15%, $space: hsl) !default;
 $link-hover-decoration:      underline !default;
 
 
@@ -189,7 +193,7 @@ $display4-weight:             300 !default;
 
 $line-height:                2.0 !default;
 
-$headings-margin-bottom:     ($spacer / 2) !default;
+$headings-margin-bottom:     ($spacer * 0.5) !default;
 $headings-font-family:       inherit !default;
 //$headings-font-weight:       500 !default;
 $headings-font-weight:       bold !default;
@@ -221,7 +225,7 @@ $list-inline-padding:         5px !default;
 //
 // Define common padding and border radius sizes and more.
 
-$line-height-lg:         (4 / 3) !default;
+$line-height-lg:         math.div(4, 3) !default;
 $line-height-sm:         2.0 !default;
 
 $border-radius:          .25rem !default;
@@ -352,7 +356,7 @@ $dropdown-border-width:          $border-width !default;
 $dropdown-divider-bg:            #e5e5e5 !default;
 
 $dropdown-link-color:            $gray-dark !default;
-$dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
+$dropdown-link-hover-color:      color.adjust($gray-dark, $lightness: -5%, $space: hsl) !default;
 $dropdown-link-hover-bg:         #f5f5f5 !default;
 
 $dropdown-link-active-color:     $component-active-color !default;
@@ -382,7 +386,7 @@ $zindex-modal:             1050 !default;
 
 $navbar-border-radius:              $border-radius !default;
 $navbar-padding-horizontal:         $spacer !default;
-$navbar-padding-vertical:           ($spacer / 2) !default;
+$navbar-padding-vertical:           ($spacer * 0.5) !default;
 
 $navbar-dark-color:                 rgba(255,255,255,.5) !default;
 $navbar-dark-hover-color:           rgba(255,255,255,.75) !default;
@@ -475,19 +479,19 @@ $jumbotron-bg:                   $gray-lighter !default;
 
 $state-success-text:             #3c763d !default;
 $state-success-bg:               #dff0d8 !default;
-$state-success-border:           darken($state-success-bg, 5%) !default;
+$state-success-border:           color.adjust($state-success-bg, $lightness: -5%, $space: hsl) !default;
 
 $state-info-text:                #31708f !default;
 $state-info-bg:                  #d9edf7 !default;
-$state-info-border:              darken($state-info-bg, 7%) !default;
+$state-info-border:              color.adjust($state-info-bg, $lightness: -7%, $space: hsl) !default;
 
 $state-warning-text:             #8a6d3b !default;
 $state-warning-bg:               #fcf8e3 !default;
-$state-warning-border:           darken($state-warning-bg, 5%) !default;
+$state-warning-border:           color.adjust($state-warning-bg, $lightness: -5%, $space: hsl) !default;
 
 $state-danger-text:              #a94442 !default;
 $state-danger-bg:                #f2dede !default;
-$state-danger-border:            darken($state-danger-bg, 5%) !default;
+$state-danger-border:            color.adjust($state-danger-bg, $lightness: -5%, $space: hsl) !default;
 
 
 // Cards
@@ -521,13 +525,13 @@ $popover-max-width:                   276px !default;
 $popover-border-width:                $border-width !default;
 $popover-border-color:                rgba(0,0,0,.2) !default;
 
-$popover-title-bg:                    darken($popover-bg, 3%) !default;
+$popover-title-bg:                    color.adjust($popover-bg, $lightness: -3%, $space: hsl) !default;
 
 $popover-arrow-width:                 10px !default;
 $popover-arrow-color:                 $popover-bg !default;
 
 $popover-arrow-outer-width:           ($popover-arrow-width + 1) !default;
-$popover-arrow-outer-color:           fade-in($popover-border-color, 0.05) !default;
+$popover-arrow-outer-color:           color.adjust($popover-border-color, $alpha: 0.05) !default;
 
 
 // Labels
@@ -615,7 +619,7 @@ $list-group-hover-bg:           #f5f5f5 !default;
 $list-group-active-color:       $component-active-color !default;
 $list-group-active-bg:          $component-active-bg !default;
 $list-group-active-border:      $list-group-active-bg !default;
-$list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
+$list-group-active-text-color:  color.adjust($list-group-active-bg, $lightness: 40%, $space: hsl) !default;
 
 $list-group-disabled-color:      $gray-light !default;
 $list-group-disabled-bg:         $gray-lighter !default;
