@@ -7,3 +7,14 @@ svg {
 	width: 40px;
 	height: 30px;
 }
+
+$container-width: 1200px;
+.half-container {
+  width: $container-width / 2;
+}
+
+$mycolor: #336699;
+.text {
+  color: color.red($mycolor);
+  background: hsl(color.hue($mycolor), 50%, 50%);
+}
