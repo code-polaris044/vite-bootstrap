@@ -27,6 +27,7 @@ export default {
 	publicDir: false,
 	// ビルド設定
 	build: {
+		sourcemap: true,
 		// 画像やフォントなどをbase64埋め込みせず、必ずファイルとして出力
 		assetsInlineLimit: 0,
 		// ビルド成果物の出力先フォルダ（resourcesの一つ上の "public" フォルダ）
