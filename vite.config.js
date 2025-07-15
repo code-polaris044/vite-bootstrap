@@ -57,6 +57,7 @@ export default {
 				bootstrap: resolve(__dirname, "resources/scss/bootstrap.scss"),
 			},
 			output: {
+				sourcemap: true,
 				// JSファイルの出力設定
 				entryFileNames: "assets/js/[name].js",
 				chunkFileNames: "assets/js/[name].js",
