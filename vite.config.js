@@ -44,7 +44,7 @@ export default {
 				//新規js Bootstrapカスタム
 				script: resolve(__dirname, "resources/js/script.js"),
 				//既存css
-				commo: resolve(__dirname, "resources/scss/common.scss"),
+				common: resolve(__dirname, "resources/scss/common.scss"),
 				contents: resolve(__dirname, "resources/scss/contents.scss"),
 				flatpickr: resolve(__dirname, "resources/scss/flatpickr.scss"),
 				home: resolve(__dirname, "resources/scss/home.scss"),
