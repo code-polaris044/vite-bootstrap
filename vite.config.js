@@ -44,7 +44,7 @@ export default {
 				//新規js Bootstrapカスタム
 				script: resolve(__dirname, "resources/js/script.js"),
 				//既存css
-				common: resolve(__dirname, "resources/scss/common.scss"),
+				commonScss: resolve(__dirname, "resources/scss/common.scss"),
 				contents: resolve(__dirname, "resources/scss/contents.scss"),
 				flatpickr: resolve(__dirname, "resources/scss/flatpickr.scss"),
 				home: resolve(__dirname, "resources/scss/home.scss"),
@@ -57,12 +57,15 @@ export default {
 				bootstrap: resolve(__dirname, "resources/scss/bootstrap.scss"),
 			},
 			output: {
-				sourcemap: true,
 				// JSファイルの出力設定
 				entryFileNames: "assets/js/[name].js",
 				chunkFileNames: "assets/js/[name].js",
 				// CSSファイルの出力設定
 				assetFileNames: (assetInfo) => {
+					// commonScss.css を common.css にリネームして出力する
+					if (assetInfo.name === "commonScss.css") {
+						return "assets/css/common.css";
+					}
 					if (assetInfo.name && assetInfo.name.endsWith(".css")) {
 						return "assets/css/[name][extname]";
 					}
@@ -88,7 +91,7 @@ export default {
 		port: 8080,
 	}, // 本番用(build後)プレビューサーバー
 	preview: {
-		port: 5000,
+		port: 9000,
 	},
 	// CSS（Sass/SCSS）の設定
 	css: {
